@@ -1,0 +1,114 @@
+package sipanonymizer
+
+/*
+ RFC 3261 - https://www.ietf.org/rfc/rfc3261.txt - 8.1.1.7 Via
+
+ The Via header field indicates the transport used for the transaction
+and identifies the location where the response is to be sent.  A Via
+header field value is added only after the transport that will be
+used to reach the next hop has been selected (which may involve the
+usage of the procedures in [4]).
+
+SIP/2.0/UDP 10.101.6.120;branch=z9hG4bKf_169eac12baa17054e0adfb3_I
+SIP/2.0/TCP 10.101.6.120;maddr=9.9.9.9;received=8.8.8.8;rport=8090;branch=z9hG4bKf_169eac12baa17054e0adfb3_I
+*/
+
+func processSipVia(v []byte) {
+
+	pos := 0
+	state := FieldBase
+
+	// Loop through the bytes making up the line
+	vLen := len(v)
+	for pos < vLen {
+		// FSM
+		switch state {
+		case FieldBase:
+			if v[pos] != ' ' {
+				// Not a space
+				if getString(v, pos, pos+8) == "SIP/2.0/" {
+					// Transport type
+					state = FieldHost
+					// 11 = len(SIP/2.0/UDP)
+					pos = pos + 11
+				}
+				// Look for a Rport identifier
+				if getString(v, pos, pos+6) == "rport=" {
+					state = FieldRPort
+					pos = pos + 6
+					continue
+				}
+				// Look for a maddr identifier
+				if getString(v, pos, pos+6) == "maddr=" {
+					state = FieldMAddr
+					pos = pos + 6
+					continue
+				}
+				// Look for a recevived identifier
+				if getString(v, pos, pos+9) == "received=" {
+					state = FieldRec
+					pos = pos + 9
+					continue
+				}
+			}
+
+		case FieldHost:
+			if v[pos] == ':' {
+				state = FieldPort
+				pos++
+				continue
+			}
+			if v[pos] == ';' {
+				state = FieldBase
+				pos++
+				continue
+			}
+			if v[pos] == '.' {
+				pos++
+				continue
+			}
+			v[pos] = maskChar
+
+		case FieldPort:
+			if v[pos] == ';' {
+				state = FieldBase
+				pos++
+				continue
+			}
+			v[pos] = maskChar
+
+		case FieldRPort:
+			if v[pos] == ';' {
+				state = FieldBase
+				pos++
+				continue
+			}
+			v[pos] = maskChar
+
+		case FieldMAddr:
+			if v[pos] == ';' {
+				state = FieldBase
+				pos++
+				continue
+			}
+			if v[pos] == '.' {
+				pos++
+				continue
+			}
+			v[pos] = maskChar
+
+		case FieldRec:
+			if v[pos] == ';' {
+				state = FieldBase
+				pos++
+				continue
+			}
+			if v[pos] == '.' {
+				pos++
+				continue
+			}
+			v[pos] = maskChar
+		}
+		pos++
+	}
+}
