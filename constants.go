@@ -6,12 +6,13 @@ const (
 	FieldNameQ
 	FieldUser
 	FieldHost
+	FieldHostIP
 	FieldPort
-	FieldRPort
-	FieldMAddr
-	FieldRec
-	FieldMedia
-	FieldIgnore
+	FieldText
+	FieldPreserveFirstOctet  // preserve first octet in IP like 192.x.x.x
+	FieldPreserveLastOctet   // preserve last octet in IP like x.x.x.10
+	FieldPreserveFirstDomain // preserve first part of domain like gooxxx.xxx
+	FieldPreserveLastDomain  // preserve first part of domain like xxxxxx.com
 )
 
-const maskChar = '*'
+const maskChar byte = '*'

@@ -7,8 +7,8 @@ func TestProcessSdpConnection(t *testing.T) {
 		src  []byte
 		want []byte
 	}{
-		{[]byte("c=IN IP4 10.101.6.120"), []byte("c=IN IP4 **.***.*.***")},
-		{[]byte("c=IN IP4 sip.domain.com"), []byte("c=IN IP4 ***.******.***")},
+		{[]byte("c=IN IP4 10.101.6.120"), []byte("c=IN IP4 10.***.*.120")},
+		{[]byte("c=IN IP4 sip.domain.com"), []byte("c=IN IP4 sip.******.com")},
 	}
 	for _, table := range tables {
 		line := make([]byte, len(table.src))
@@ -26,8 +26,8 @@ func TestProcessSdpOriginator(t *testing.T) {
 		src  []byte
 		want []byte
 	}{
-		{[]byte("o=PortaSIP 4530741258397867310 1 IN IP4 217.182.47.207"), []byte("o=PortaSIP 4530741258397867310 1 IN IP4 ***.***.**.***")},
-		{[]byte("o=PortaSIP 4530741258397867310 1 IN IP4 sip.domain.com"), []byte("o=PortaSIP 4530741258397867310 1 IN IP4 ***.******.***")},
+		{[]byte("o=PortaSIP 4530741258397867310 1 IN IP4 217.182.47.207"), []byte("o=PortaSIP 4530741258397867310 1 IN IP4 217.***.**.207")},
+		{[]byte("o=PortaSIP 4530741258397867310 1 IN IP4 sip.domain.com"), []byte("o=PortaSIP 4530741258397867310 1 IN IP4 sip.******.com")},
 	}
 	for _, table := range tables {
 		line := make([]byte, len(table.src))

@@ -1,15 +1,5 @@
 package sipanonymizer
 
-// Finds the first @ char
-func indexAtChar(s []byte) int {
-	for i := 0; i < len(s); i++ {
-		if s[i] == '@' {
-			return i
-		}
-	}
-	return -1
-}
-
 // Finds the first valid Seperate or notes its type
 func indexSep(s []byte) (int, byte) {
 	for i := 0; i < len(s); i++ {
@@ -19,4 +9,17 @@ func indexSep(s []byte) (int, byte) {
 		}
 	}
 	return -1, ' '
+}
+
+// Get a slice from a slice of bytes
+// Checks the bounds to avoid any range errors
+func getBytes(sl []byte, from, to int) []byte {
+	// Limit if over cap
+	if from > cap(sl) {
+		return nil
+	}
+	if to > cap(sl) {
+		return sl[from:]
+	}
+	return sl[from:to]
 }

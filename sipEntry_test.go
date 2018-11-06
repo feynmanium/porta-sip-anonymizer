@@ -1,12 +1,7 @@
-package main
+package sipanonymizer
 
 import (
-	"log"
-	"time"
-
-	"github.com/marv2097/siprocket"
-
-	"github.com/maxkondr/porta-sip-anonymizer"
+	"testing"
 )
 
 var (
@@ -58,7 +53,6 @@ var (
 		"a=sendrecv\n\t" +
 		"a=ssrc:1474426549 cname:1Lv6hOmlHPqDqSXM\n\t" +
 		"a=ssrc:1474426549 msid:95f5780e-f8a9-44cd-b3f9-32e329fa7144 d11")
-
 	rawResp = []byte("2018-10-31T14:38:52.352724Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|995| RECEIVED message from UDP:192.168.64.50:5060 at UDP:192.168.67.224:5060:\n\t" +
 		"SIP/2.0 200 OK\r\n" +
 		"Via: SIP/2.0/UDP 192.168.2.242:5060;received=22.23.24.25;branch=z9hG4bK5ea22bdd74d079b9;alias;rport=5060\r\n" +
@@ -103,43 +97,14 @@ var (
 		"a=ssrc:1474426549 msid:95f5780e-f8a9-44cd-b3f9-32e329fa7144 d11")
 )
 
-func timeTrack(start time.Time, name string) {
-	elapsed := time.Since(start)
-	log.Printf("%s took %s", name, elapsed)
+func BenchmarkProcessSipEntryRequest(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		parse(rawReq)
+	}
 }
 
-func parseRequestYakut() {
-	defer timeTrack(time.Now(), "yakut parse request")
-	sipanonymizer.ProcessMessage(rawReq)
-}
-
-func parseResponseYakut() {
-	defer timeTrack(time.Now(), "yakut parse request")
-	sipanonymizer.ProcessMessage(rawResp)
-}
-
-func parseRequestSiprocket() {
-	defer timeTrack(time.Now(), "siprocket parse request")
-	siprocket.Parse(rawReq)
-}
-
-func parseResponseSiprocket() {
-	defer timeTrack(time.Now(), "siprocket parse response")
-	siprocket.Parse(rawResp)
-}
-
-func main() {
-
-	// msg := sipanonymizer.ProcessMessage(rawReq)
-	// fmt.Printf("%s", msg)
-
-	// msg := sipanonymizer.ProcessMessage(rawResp)
-	// fmt.Printf("%s", msg)
-
-	// parseRequestYakut()
-	// parseRequestSiprocket()
-
-	// parseResponseYakut()
-	// parseResponseSiprocket()
-
+func BenchmarkProcessSipEntryResponse(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		parse(rawResp)
+	}
 }

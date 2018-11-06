@@ -5,26 +5,15 @@ import (
 	"strings"
 )
 
-type sipHeader struct {
-	Value []byte // Sip Value
-}
-
-// SipMsg struct contains parsed SIP message.
-// Not all headers are parsed, but only those that contain
-// user's personal data.
-type SipMsg struct {
-	// StartLine     sipHeader
-	Headers []sipHeader
-	// Sdp      SdpMsg
-}
-
-func parse(v []byte) (output SipMsg) {
-
-	lines := bytes.Split(v, []byte("\r\n"))
+func parse(v []byte) []byte {
+	lines := bytes.Split(v, []byte("\n\t"))
+	output := [][]byte{}
 
 	for i, line := range lines {
 		line = bytes.TrimSpace(line)
 		if i == 0 {
+			processPortaStartLine(line)
+		} else if i == 1 {
 			// For the first line parse the request
 			processSipRequestLine(line)
 		} else {
@@ -60,18 +49,7 @@ func parse(v []byte) (output SipMsg) {
 
 			}
 		}
-		output.Headers = append(output.Headers, sipHeader{line})
+		output = append(output, line)
 	}
-
-	return
-}
-
-// GetString returns string representation
-func (msg SipMsg) GetString() string {
-	var out bytes.Buffer
-	for _, h := range msg.Headers {
-		out.Write(h.Value)
-		out.Write([]byte("\r\n"))
-	}
-	return out.String()
+	return bytes.Join(output, []byte("\n\t"))
 }

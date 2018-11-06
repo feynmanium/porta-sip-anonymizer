@@ -1,5 +1,9 @@
 package sipanonymizer
 
+import (
+	"bytes"
+)
+
 /*
  RFC 3261 - https://www.ietf.org/rfc/rfc3261.txt
 
@@ -14,6 +18,7 @@ sip:anonymous@anonymous.invalid;tag=bvbvfhehj
 func processSipURL(v []byte) {
 	pos := 0
 	state := FieldBase
+	atPos := bytes.IndexByte(v, '@')
 
 	// Loop through the bytes making up the line
 	vLen := len(v)
@@ -28,48 +33,35 @@ func processSipURL(v []byte) {
 			}
 			if v[pos] != ' ' {
 				// Not a space so check for uri types
-				if getString(v, pos, pos+4) == "sip:" {
-					if indexAtChar(v) == -1 {
-						state = FieldHost
-					} else {
-						state = FieldUser
-					}
+				if bytes.Equal(getBytes(v, pos, pos+4), []byte("sip:")) {
 					pos = pos + 4
+					if atPos < 0 {
+						// there is no user part
+						processHost(v[pos+1:])
+						return
+					}
+					state = FieldUser
 					continue
 				}
-				if getString(v, pos, pos+5) == "sips:" {
-					if indexAtChar(v) == -1 {
-						state = FieldHost
-					} else {
-						state = FieldUser
-					}
+				if bytes.Equal(getBytes(v, pos, pos+5), []byte("sips:")) {
 					pos = pos + 5
-					continue
-				}
-				if getString(v, pos, pos+4) == "tel:" {
-					if indexAtChar(v) == -1 {
-						state = FieldHost
-					} else {
-						state = FieldUser
+					if atPos < 0 {
+						// there is no user part
+						processHost(v[pos+1:])
+						return
 					}
+					state = FieldUser
+					continue
+				}
+				if bytes.Equal(getBytes(v, pos, pos+4), []byte("tel:")) {
 					pos = pos + 4
+					if atPos < 0 {
+						// there is no user part
+						processHost(v[pos+1:])
+						return
+					}
+					state = FieldUser
 					continue
-				}
-				// Look for a Tag identifier
-				if getString(v, pos, pos+4) == "tag=" {
-					// there is nothing to hide in the rest of line
-					return
-				}
-				// Look for other identifiers and ignore
-				if v[pos] == '=' {
-					state = FieldIgnore
-					pos++
-					continue
-				}
-				// Look for a User Type identifier
-				if getString(v, pos, pos+5) == "user=" {
-					// there is nothing to hide in the rest of line
-					return
 				}
 				// Check for other chrs
 				if v[pos] != '<' && v[pos] != '>' && v[pos] != ';' {
@@ -98,31 +90,8 @@ func processSipURL(v []byte) {
 
 		case FieldUser:
 			if v[pos] == '@' {
-				state = FieldHost
 				pos++
-				continue
-			}
-			// hide displayName
-			v[pos] = maskChar
-
-		case FieldHost:
-			if v[pos] == ':' {
-				state = FieldPort
-				pos++
-				continue
-			}
-			if v[pos] == ';' || v[pos] == '>' {
-				return
-			}
-			if v[pos] == '.' {
-				pos++
-				continue
-			}
-			// hide displayName
-			v[pos] = maskChar
-
-		case FieldPort:
-			if v[pos] == ';' || v[pos] == '>' || v[pos] == ' ' {
+				processHost(v[pos:])
 				return
 			}
 			// hide displayName

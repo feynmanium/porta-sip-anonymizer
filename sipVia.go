@@ -1,5 +1,9 @@
 package sipanonymizer
 
+import (
+	"bytes"
+)
+
 /*
  RFC 3261 - https://www.ietf.org/rfc/rfc3261.txt - 8.1.1.7 Via
 
@@ -15,7 +19,14 @@ SIP/2.0/TCP 10.101.6.120;maddr=9.9.9.9;received=8.8.8.8;rport=8090;branch=z9hG4b
 
 func processSipVia(v []byte) {
 
-	pos := 0
+	// skip SIP/2.0/UDP
+	pos := bytes.Index(v, []byte("SIP"))
+	if pos < 0 {
+		// not a Via
+		return
+	}
+	pos = pos + 12
+	seenHost := false
 	state := FieldBase
 
 	// Loop through the bytes making up the line
@@ -24,86 +35,37 @@ func processSipVia(v []byte) {
 		// FSM
 		switch state {
 		case FieldBase:
-			if v[pos] != ' ' {
-				// Not a space
-				if getString(v, pos, pos+8) == "SIP/2.0/" {
-					// Transport type
-					state = FieldHost
-					// 11 = len(SIP/2.0/UDP)
-					pos = pos + 11
-				}
-				// Look for a Rport identifier
-				if getString(v, pos, pos+6) == "rport=" {
-					state = FieldRPort
-					pos = pos + 6
-					continue
-				}
-				// Look for a maddr identifier
-				if getString(v, pos, pos+6) == "maddr=" {
-					state = FieldMAddr
-					pos = pos + 6
-					continue
-				}
-				// Look for a recevived identifier
-				if getString(v, pos, pos+9) == "received=" {
-					state = FieldRec
-					pos = pos + 9
-					continue
-				}
-			}
-
-		case FieldHost:
-			if v[pos] == ':' {
-				state = FieldPort
-				pos++
-				continue
-			}
 			if v[pos] == ';' {
-				state = FieldBase
 				pos++
 				continue
 			}
-			if v[pos] == '.' {
-				pos++
+			// we are right after 'SIP/2.0/UDP ', at the begining of host
+			if !seenHost {
+				pos = pos + processHost(v[pos:])
+				seenHost = true
 				continue
 			}
-			v[pos] = maskChar
-
+			// Look for a Rport identifier
+			if bytes.Equal(getBytes(v, pos, pos+6), []byte("rport=")) {
+				state = FieldPort
+				pos = pos + 6
+				continue
+			}
+			// Look for a maddr identifier
+			if bytes.Equal(getBytes(v, pos, pos+6), []byte("maddr=")) {
+				pos = pos + 6
+				pos = pos + processHost(v[pos:])
+				continue
+			}
+			// Look for a recevived identifier
+			if bytes.Equal(getBytes(v, pos, pos+9), []byte("received=")) {
+				pos = pos + 9
+				pos = pos + processHost(v[pos:])
+				continue
+			}
 		case FieldPort:
 			if v[pos] == ';' {
 				state = FieldBase
-				pos++
-				continue
-			}
-			v[pos] = maskChar
-
-		case FieldRPort:
-			if v[pos] == ';' {
-				state = FieldBase
-				pos++
-				continue
-			}
-			v[pos] = maskChar
-
-		case FieldMAddr:
-			if v[pos] == ';' {
-				state = FieldBase
-				pos++
-				continue
-			}
-			if v[pos] == '.' {
-				pos++
-				continue
-			}
-			v[pos] = maskChar
-
-		case FieldRec:
-			if v[pos] == ';' {
-				state = FieldBase
-				pos++
-				continue
-			}
-			if v[pos] == '.' {
 				pos++
 				continue
 			}
