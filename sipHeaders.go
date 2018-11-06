@@ -11,37 +11,37 @@ From: sip:anonymous@anonymous.invalid;tag=bvbvfhehj
 
 */
 
-// ProcessSipFrom hides user's personal data in SIP h_From
-func ProcessSipFrom(v []byte) {
+// processSipFrom hides user's personal data in SIP h_From
+func processSipFrom(v []byte) {
 	pos, sep := indexSep(v)
 	if sep != ':' {
 		// not a SIP header
 		return
 	}
 
-	processSipURL(v[pos+2 : len(v)])
+	processSipURL(v[pos+2:])
 }
 
-// ProcessSipTo hides user's personal data in SIP h_To
-func ProcessSipTo(v []byte) {
+// processSipTo hides user's personal data in SIP h_To
+func processSipTo(v []byte) {
 	pos, sep := indexSep(v)
 	if sep != ':' {
 		// not a SIP header
 		return
 	}
 
-	processSipURL(v[pos+2 : len(v)])
+	processSipURL(v[pos+2:])
 }
 
-// ProcessSipContact hides user's personal data in SIP h_Contact
-func ProcessSipContact(v []byte) {
+// processSipContact hides user's personal data in SIP h_Contact
+func processSipContact(v []byte) {
 	pos, sep := indexSep(v)
 	if sep != ':' {
 		// not a SIP header
 		return
 	}
 
-	processSipURL(v[pos+2 : len(v)])
+	processSipURL(v[pos+2:])
 }
 
 // ProcessSipCallID hides user's personal data in SIP h_Call-id
@@ -52,7 +52,7 @@ func ProcessSipCallID(v []byte) {
 		return
 	}
 
-	processSipCallID(v[pos+2 : len(v)])
+	processSipCallID(v[pos+2:])
 }
 
 // ProcessSipVia hides user's personal data in SIP h_Via
@@ -63,5 +63,27 @@ func ProcessSipVia(v []byte) {
 		return
 	}
 
-	processSipVia(v[pos+2 : len(v)])
+	processSipVia(v[pos+2:])
+}
+
+// processRoute hides user's personal data in SIP h_Record-Route
+func processRoute(v []byte) {
+	pos, sep := indexSep(v)
+	if sep != ':' {
+		// not a SIP header
+		return
+	}
+
+	processSipURL(v[pos+2:])
+}
+
+// processPrivacyHeader hides user's personal data in SIP h_PAI and h_RPID
+func processPrivacyHeader(v []byte) {
+	pos, sep := indexSep(v)
+	if sep != ':' {
+		// not a SIP header
+		return
+	}
+
+	processSipURL(v[pos+2:])
 }

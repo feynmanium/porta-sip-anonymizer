@@ -45,12 +45,7 @@ func processSipRequestLine(v []byte) {
 			processHost(v[pos:])
 			return
 		}
-		if pos == atPos {
-			pos++
-			continue
-		}
 		// mask user
-		v[pos] = maskChar
-		pos++
+		pos = pos + processUser(v[pos:])
 	}
 }

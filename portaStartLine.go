@@ -12,28 +12,18 @@ import (
 
 // processPortaStartLine hides user's personal data in Porta's start line
 func processPortaStartLine(v []byte) {
-	pos := bytes.LastIndexByte(v, '|')
-	if pos < 0 {
-		fmt.Println("error has occured, there are no '|' chars in line:\n", v)
+	lines := bytes.Split(v, []byte(" "))
+	if len(lines) == 0 {
+		fmt.Println("error has occured, there are no ':' chars in line:\n", v)
 		return
 	}
-	state := FieldText
 
-	vLen := len(v)
-	for pos < vLen {
-		// FSM
-		switch state {
-		case FieldText:
-			tr := getBytes(v, pos, pos+4)
-			if bytes.Equal(tr, []byte("UDP:")) ||
-				bytes.Equal(tr, []byte("TCP:")) ||
-				bytes.Equal(tr, []byte("TLS:")) {
-				pos = pos + 4
-				pos = pos + processHost(v[pos:])
-				continue
-			}
+	for _, line := range lines {
+		tr := getBytes(line, 0, 4)
+		if bytes.Equal(tr, []byte("UDP:")) ||
+			bytes.Equal(tr, []byte("TCP:")) ||
+			bytes.Equal(tr, []byte("TLS:")) {
+			processHost(line[5:])
 		}
-		pos++
 	}
-
 }

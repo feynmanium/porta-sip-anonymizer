@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"time"
 
@@ -15,7 +16,9 @@ var (
 		"Via: SIP/2.0/UDP 10.101.6.120;branch=z9hG4bKf_7054e0adfb3_I\n\t" +
 		"Via: SIP/2.0/UDP 94.78.45.12;maddr=9.9.9.9;received=8.8.8.8;rport=8090;branch=z9hG4bKf_169eac12baa170\n\t" +
 		"Via: SIP/2.0/UDP 192.168.120.100;branch=z9hG4bKf_1234567\n\t" +
-		"From: “Andrew Prokop” <sip:aprokop@10.101.6.120:5060>;tag=35b8d8a74ca0f4e34e0adfa7_F10.101.6.120\n\t" +
+		"Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>\n\t" +
+		"Route: <sip:192.168.67.224;lr;ob;pinhole=UDP:192.168.64.50:5060;ep>\n\t" +
+		"From: \"Andrew Prokop\" <sip:aprokop@10.101.6.120:5060>;tag=35b8d8a74ca0f4e34e0adfa7_F10.101.6.120\n\t" +
 		"To: sip:twhite@10.101.5.120:5060\n\t" +
 		"Call-ID: f169eac17a017b0a4e0adfa8I@10.101.6.120\n\t" +
 		"CSeq: 15 INVITE\n\t" +
@@ -24,6 +27,8 @@ var (
 		"Content-Type: application/sdp\n\t" +
 		"Content-Length: 306\n\t" +
 		"User-Agent: Avaya SIP Softphone\n\t" +
+		"P-Asserted-Identity: <sip:123001@192.168.67.224>\n\t" +
+		"Remote-Party-ID: <sip:123001@192.168.67.224>;party=calling\n\t" +
 		"Supported: replaces\n\t" +
 		"X-TEST-HEADER: test\n\t" +
 		"\n\t" +
@@ -130,8 +135,9 @@ func parseResponseSiprocket() {
 
 func main() {
 
-	// msg := sipanonymizer.ProcessMessage(rawReq)
-	// fmt.Printf("%s", msg)
+	// fmt.Println(string(rawReq))
+	msg := sipanonymizer.ProcessMessage(rawReq)
+	fmt.Printf("%s", msg)
 
 	// msg := sipanonymizer.ProcessMessage(rawResp)
 	// fmt.Printf("%s", msg)

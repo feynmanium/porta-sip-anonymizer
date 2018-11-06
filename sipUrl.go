@@ -19,6 +19,7 @@ func processSipURL(v []byte) {
 	pos := 0
 	state := FieldBase
 	atPos := bytes.IndexByte(v, '@')
+	pinholePos := bytes.Index(v, []byte("pinhole="))
 
 	// Loop through the bytes making up the line
 	vLen := len(v)
@@ -31,43 +32,56 @@ func processSipURL(v []byte) {
 				pos++
 				continue
 			}
-			if v[pos] != ' ' {
-				// Not a space so check for uri types
-				if bytes.Equal(getBytes(v, pos, pos+4), []byte("sip:")) {
-					pos = pos + 4
-					if atPos < 0 {
-						// there is no user part
-						processHost(v[pos+1:])
-						return
+			// Not a space so check for uri types
+			if bytes.Equal(getBytes(v, pos, pos+4), []byte("sip:")) {
+				pos = pos + 4
+				if atPos < 0 {
+					// there is no user part
+					pos = pos + processHost(v[pos+1:])
+					if pinholePos > 0 {
+						// pinhole=UDP:
+						pos = pinholePos + len("pinhole=") + 4
+						processHost(v[pos:])
 					}
-					state = FieldUser
-					continue
+					return
 				}
-				if bytes.Equal(getBytes(v, pos, pos+5), []byte("sips:")) {
-					pos = pos + 5
-					if atPos < 0 {
-						// there is no user part
-						processHost(v[pos+1:])
-						return
+				state = FieldUser
+				continue
+			}
+			if bytes.Equal(getBytes(v, pos, pos+5), []byte("sips:")) {
+				pos = pos + 5
+				if atPos < 0 {
+					// there is no user part
+					pos = pos + processHost(v[pos+1:])
+					if pinholePos > 0 {
+						// pinhole=UDP:
+						pos = pinholePos + len("pinhole=") + 4
+						processHost(v[pos:])
 					}
-					state = FieldUser
-					continue
+					return
 				}
-				if bytes.Equal(getBytes(v, pos, pos+4), []byte("tel:")) {
-					pos = pos + 4
-					if atPos < 0 {
-						// there is no user part
-						processHost(v[pos+1:])
-						return
+				state = FieldUser
+				continue
+			}
+			if bytes.Equal(getBytes(v, pos, pos+4), []byte("tel:")) {
+				pos = pos + 4
+				if atPos < 0 {
+					// there is no user part
+					pos = pos + processHost(v[pos+1:])
+					if pinholePos > 0 {
+						// pinhole=UDP:
+						pos = pinholePos + len("pinhole=") + 4
+						processHost(v[pos:])
 					}
-					state = FieldUser
-					continue
+					return
 				}
-				// Check for other chrs
-				if v[pos] != '<' && v[pos] != '>' && v[pos] != ';' {
-					state = FieldName
-					continue
-				}
+				state = FieldUser
+				continue
+			}
+			// Check for other chrs
+			if v[pos] != '<' && v[pos] != '>' && v[pos] != ';' {
+				state = FieldName
+				continue
 			}
 
 		case FieldNameQ:
@@ -77,7 +91,8 @@ func processSipURL(v []byte) {
 				continue
 			}
 			// hide displayName
-			v[pos] = maskChar
+			pos = pos + processUser(v[pos:])
+			continue
 
 		case FieldName:
 			if v[pos] == '<' || v[pos] == ' ' {
@@ -86,16 +101,18 @@ func processSipURL(v []byte) {
 				continue
 			}
 			// hide displayName
-			v[pos] = maskChar
+			pos = pos + processUser(v[pos:])
+			continue
 
 		case FieldUser:
-			if v[pos] == '@' {
+			if pos == atPos {
 				pos++
 				processHost(v[pos:])
 				return
 			}
 			// hide displayName
-			v[pos] = maskChar
+			pos = pos + processUser(v[pos:])
+			continue
 		}
 		pos++
 	}

@@ -2,7 +2,6 @@ package sipanonymizer
 
 import (
 	"bytes"
-	"strings"
 )
 
 func parse(v []byte) []byte {
@@ -21,32 +20,35 @@ func parse(v []byte) []byte {
 			spos, stype := indexSep(line)
 			if spos > 1 && stype == ':' {
 				// SIP: Break up into header and value
-				lhdr := strings.ToLower(string(line[0:spos]))
+				lhdr := bytes.ToLower(line[0:spos])
 				switch {
-				case lhdr == "v" || lhdr == "via":
+				case bytes.Equal(lhdr, []byte("v")) || bytes.Equal(lhdr, []byte("via")):
 					ProcessSipVia(line)
-				case lhdr == "f" || lhdr == "from":
-					ProcessSipFrom(line)
-				case lhdr == "t" || lhdr == "to":
-					ProcessSipTo(line)
-				case lhdr == "m" || lhdr == "contact":
-					ProcessSipContact(line)
-				case lhdr == "i" || lhdr == "call-id":
+				case bytes.Equal(lhdr, []byte("f")) || bytes.Equal(lhdr, []byte("from")):
+					processSipFrom(line)
+				case bytes.Equal(lhdr, []byte("t")) || bytes.Equal(lhdr, []byte("to")):
+					processSipTo(line)
+				case bytes.Equal(lhdr, []byte("m")) || bytes.Equal(lhdr, []byte("contact")):
+					processSipContact(line)
+				case bytes.Equal(lhdr, []byte("i")) || bytes.Equal(lhdr, []byte("call-id")):
 					ProcessSipCallID(line)
+				case bytes.Equal(lhdr, []byte("record-route")) || bytes.Equal(lhdr, []byte("route")):
+					processRoute(line)
+				case bytes.Equal(lhdr, []byte("remote-party-id")) || bytes.Equal(lhdr, []byte("p-asserted-identity")):
+					processPrivacyHeader(line)
 				}
 			} else if spos == 1 && stype == '=' {
 				// SDP: Break up into header and value
-				lhdr := strings.ToLower(string(line[0]))
+				lhdr := byte(line[0])
 				// Switch on the line header
 				switch {
-				case lhdr == "m":
+				case lhdr == byte('m'):
 					processSdpMedia(line)
-				case lhdr == "c":
+				case lhdr == byte('c'):
 					processSdpConnection(line)
-				case lhdr == "o":
+				case lhdr == byte('o'):
 					processSdpOriginator(line)
 				} // End of Switch
-
 			}
 		}
 		output = append(output, line)
