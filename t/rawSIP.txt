@@ -1,0 +1,1399 @@
+
+&{Entries:[{MetaInfo:{DateTime:2018-10-31 14:38:49.293806 DiagramText:(A.? 101/I) INVITE DialogID:A.? Level:0 MessageClass:request Operation:receive ParticipantFrom:UDP:192.168.64.92:5061 ParticipantFromID:4852480525443325197 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:2018-10-31T14:38:49.293806Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|981| RECEIVED message from UDP:192.168.64.92:5061 at UDP:192.168.67.224:5060:
+	INVITE sip:123002@192.168.67.224 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-1ebdd438
+	Max-Forwards: 70
+	Contact: <sip:123001@192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 101 INVITE
+	Expires: 240
+	Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER
+	Content-Type: application/sdp
+	Supported: replaces
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	Content-Length: 403
+	
+	v=0
+	o=- 124529722 124529722 IN IP4 192.168.64.92
+	s=-
+	c=IN IP4 192.168.64.92
+	t=0 0
+	m=audio 16478 RTP/AVP 0 2 4 8 18 96 97 98 101
+	a=rtpmap:0 PCMU/8000
+	a=rtpmap:2 G726-32/8000
+	a=rtpmap:4 G723/8000
+	a=rtpmap:8 PCMA/8000
+	a=rtpmap:18 G729a/8000
+	a=rtpmap:96 G726-40/8000
+	a=rtpmap:97 G726-24/8000
+	a=rtpmap:98 G726-16/8000
+	a=rtpmap:101 telephone-event/8000
+	a=fmtp:101 0-15
+	a=ptime:30
+	a=sendrecv
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.295029 DiagramText:(A.? 101/I) INVITE DialogID:A.? Level:1 MessageClass:request Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.295029Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|1271| SENDING message to UDP:192.168.67.223:5070 from UDP:192.168.67.224:5060:
+	INVITE sip:123002@192.168.67.223:5070 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---755e80dc9fadf5438ab4244c4b4e0033;rport
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-1ebdd438;rport=5061
+	Max-Forwards: 69
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	Contact: <sip:123001@192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 101 INVITE
+	Expires: 240
+	Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER
+	Content-Type: application/sdp
+	Supported: replaces
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	PortaOne-Requested-URI: sip:123002@192.168.67.224
+	PortaSIP-Notify: NAT=192.168.64.92;NAT-type=4
+	Content-Length: 403
+	
+	v=0
+	o=- 124529722 124529722 IN IP4 192.168.64.92
+	s=-
+	c=IN IP4 192.168.64.92
+	t=0 0
+	m=audio 16478 RTP/AVP 0 2 4 8 18 96 97 98 101
+	a=rtpmap:0 PCMU/8000
+	a=rtpmap:2 G726-32/8000
+	a=rtpmap:4 G723/8000
+	a=rtpmap:8 PCMA/8000
+	a=rtpmap:18 G729a/8000
+	a=rtpmap:96 G726-40/8000
+	a=rtpmap:97 G726-24/8000
+	a=rtpmap:98 G726-16/8000
+	a=rtpmap:101 telephone-event/8000
+	a=fmtp:101 0-15
+	a=ptime:30
+	a=sendrecv
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.324434 DiagramText:(A.? 101/I) INVITE DialogID:A.? Level:0 MessageClass:request Operation:receive ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.324434Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|1272| RECEIVED message from UDP:192.168.67.224:5060 at UDP:192.168.67.223:5070:
+	INVITE sip:123002@192.168.67.223:5070 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---755e80dc9fadf5438ab4244c4b4e0033;rport
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-1ebdd438;rport=5061
+	Max-Forwards: 69
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	Contact: <sip:123001@192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 101 INVITE
+	Expires: 240
+	Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER
+	Content-Type: application/sdp
+	Supported: replaces
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	PortaOne-Requested-URI: sip:123002@192.168.67.224
+	PortaSIP-Notify: NAT=192.168.64.92;NAT-type=4
+	Content-Length: 403
+	
+	v=0
+	o=- 124529722 124529722 IN IP4 192.168.64.92
+	s=-
+	c=IN IP4 192.168.64.92
+	t=0 0
+	m=audio 16478 RTP/AVP 0 2 4 8 18 96 97 98 101
+	a=rtpmap:0 PCMU/8000
+	a=rtpmap:2 G726-32/8000
+	a=rtpmap:4 G723/8000
+	a=rtpmap:8 PCMA/8000
+	a=rtpmap:18 G729a/8000
+	a=rtpmap:96 G726-40/8000
+	a=rtpmap:97 G726-24/8000
+	a=rtpmap:98 G726-16/8000
+	a=rtpmap:101 telephone-event/8000
+	a=fmtp:101 0-15
+	a=ptime:30
+	a=sendrecv
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.335657 DiagramText:b2bua[4362] Found dynamic SP for 'caller': {} DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.335657Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|35| Found dynamic SP for 'caller': {}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.339676 DiagramText:(A.b 101/I) 401 Unauthorized DialogID:A.b Level:1 MessageClass:code_4xx Operation:send ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.339676Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|762| SENDING message to UDP:192.168.67.224:5060 from UDP:192.168.67.223:5070:
+	SIP/2.0 401 Unauthorized
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---755e80dc9fadf5438ab4244c4b4e0033;rport=5060
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-1ebdd438;rport=5061
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 101 INVITE
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozScR.i
+	Server: PortaSIP
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+	WWW-Authenticate: Digest realm="sip-3.performance",nonce="1540996729:1c5bb2e03c5e2d1fae35407d9ebe1344ae852389"
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.340594 DiagramText:(A.b 101/I) 401 Unauthorized DialogID:A.b Level:0 MessageClass:code_4xx Operation:receive ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.340594Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|763| RECEIVED message from UDP:192.168.67.223:5070 at UDP:192.168.67.224:5060:
+	SIP/2.0 401 Unauthorized
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---755e80dc9fadf5438ab4244c4b4e0033;rport=5060
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-1ebdd438;rport=5061
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozScR.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 101 INVITE
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+	Server: PortaSIP
+	WWW-Authenticate: Digest realm="sip-3.performance",nonce="1540996729:1c5bb2e03c5e2d1fae35407d9ebe1344ae852389"
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.341513 DiagramText:(A.b 101/I) 401 Unauthorized DialogID:A.b Level:0 MessageClass:code_4xx Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.64.92:5061 ParticipantToID:4852480525443325197 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.341513Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|653| SENDING message to UDP:192.168.64.92:5061 from UDP:192.168.67.224:5060:
+	SIP/2.0 401 Unauthorized
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-1ebdd438;rport=5061
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozScR.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 101 INVITE
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+	Server: PortaSIP
+	WWW-Authenticate: Digest realm="sip-3.performance",nonce="1540996729:1c5bb2e03c5e2d1fae35407d9ebe1344ae852389"
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.386737 DiagramText:(A.b 101/A) ACK DialogID:A.b Level:0 MessageClass:ACK_request Operation:receive ParticipantFrom:UDP:192.168.64.92:5061 ParticipantFromID:4852480525443325197 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.386737Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|464| RECEIVED message from UDP:192.168.64.92:5061 at UDP:192.168.67.224:5060:
+	ACK sip:123002@192.168.67.224 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-1ebdd438
+	Max-Forwards: 70
+	Contact: <sip:123001@192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozScR.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 101 ACK
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.387502 DiagramText:edgeproxy[4783] Successfully decoded fault tolerant route: sip:192.168.67.223:5070, VIP: 192.168.67.224 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.387502Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IG|89| Successfully decoded fault tolerant route: sip:192.168.67.223:5070, VIP: 192.168.67.224
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.387650 DiagramText:(A.b 101/A) ACK DialogID:A.b Level:1 MessageClass:ACK_request Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.387650Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|625| SENDING message to UDP:192.168.67.223:5070 from UDP:192.168.67.224:5060:
+	ACK sip:123002@192.168.67.224 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---755e80dc9fadf5438ab4244c4b4e0033;rport
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-1ebdd438;rport=5061
+	Max-Forwards: 69
+	Contact: <sip:123001@192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozScR.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 101 ACK
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	PortaSIP-Notify: NAT=192.168.64.92;NAT-type=4
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.397055 DiagramText:(A.? 102/I) INVITE DialogID:A.? Level:0 MessageClass:request Operation:receive ParticipantFrom:UDP:192.168.64.92:5061 ParticipantFromID:4852480525443325197 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.397055Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|1198| RECEIVED message from UDP:192.168.64.92:5061 at UDP:192.168.67.224:5060:
+	INVITE sip:123002@192.168.67.224 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-f72957e0
+	Max-Forwards: 70
+	Contact: <sip:123001@192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 INVITE
+	Expires: 240
+	Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER
+	Content-Type: application/sdp
+	Supported: replaces
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	Authorization: Digest username="123001",realm="sip-3.performance",nonce="1540996729:1c5bb2e03c5e2d1fae35407d9ebe1344ae852389",uri="sip:123002@192.168.67.224",algorithm=MD5,response="e940af0b2865711c89b6edfe63b98e05"
+	Content-Length: 403
+	
+	v=0
+	o=- 124529722 124529722 IN IP4 192.168.64.92
+	s=-
+	c=IN IP4 192.168.64.92
+	t=0 0
+	m=audio 16478 RTP/AVP 0 2 4 8 18 96 97 98 101
+	a=rtpmap:0 PCMU/8000
+	a=rtpmap:2 G726-32/8000
+	a=rtpmap:4 G723/8000
+	a=rtpmap:8 PCMA/8000
+	a=rtpmap:18 G729a/8000
+	a=rtpmap:96 G726-40/8000
+	a=rtpmap:97 G726-24/8000
+	a=rtpmap:98 G726-16/8000
+	a=rtpmap:101 telephone-event/8000
+	a=fmtp:101 0-15
+	a=ptime:30
+	a=sendrecv
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.399828 DiagramText:(A.? 102/I) INVITE DialogID:A.? Level:1 MessageClass:request Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.399828Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|1488| SENDING message to UDP:192.168.67.223:5070 from UDP:192.168.67.224:5060:
+	INVITE sip:123002@192.168.67.223:5070 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---96f0641a36d849341271f723ec21dfc5;rport
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-f72957e0;rport=5061
+	Max-Forwards: 69
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	Contact: <sip:123001@192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 INVITE
+	Expires: 240
+	Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER
+	Content-Type: application/sdp
+	Supported: replaces
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	Authorization: Digest username="123001",realm="sip-3.performance",nonce="1540996729:1c5bb2e03c5e2d1fae35407d9ebe1344ae852389",uri="sip:123002@192.168.67.224",algorithm=MD5,response="e940af0b2865711c89b6edfe63b98e05"
+	PortaOne-Requested-URI: sip:123002@192.168.67.224
+	PortaSIP-Notify: NAT=192.168.64.92;NAT-type=4
+	Content-Length: 403
+	
+	v=0
+	o=- 124529722 124529722 IN IP4 192.168.64.92
+	s=-
+	c=IN IP4 192.168.64.92
+	t=0 0
+	m=audio 16478 RTP/AVP 0 2 4 8 18 96 97 98 101
+	a=rtpmap:0 PCMU/8000
+	a=rtpmap:2 G726-32/8000
+	a=rtpmap:4 G723/8000
+	a=rtpmap:8 PCMA/8000
+	a=rtpmap:18 G729a/8000
+	a=rtpmap:96 G726-40/8000
+	a=rtpmap:97 G726-24/8000
+	a=rtpmap:98 G726-16/8000
+	a=rtpmap:101 telephone-event/8000
+	a=fmtp:101 0-15
+	a=ptime:30
+	a=sendrecv
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.401322 DiagramText:(A.b 101/A) ACK DialogID:A.b Level:0 MessageClass:ACK_request Operation:receive ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.401322Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|626| RECEIVED message from UDP:192.168.67.224:5060 at UDP:192.168.67.223:5070:
+	ACK sip:123002@192.168.67.224 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---755e80dc9fadf5438ab4244c4b4e0033;rport
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-1ebdd438;rport=5061
+	Max-Forwards: 69
+	Contact: <sip:123001@192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozScR.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 101 ACK
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	PortaSIP-Notify: NAT=192.168.64.92;NAT-type=4
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.424524 DiagramText:(A.? 102/I) INVITE DialogID:A.? Level:0 MessageClass:request Operation:receive ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.424524Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|1489| RECEIVED message from UDP:192.168.67.224:5060 at UDP:192.168.67.223:5070:
+	INVITE sip:123002@192.168.67.223:5070 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---96f0641a36d849341271f723ec21dfc5;rport
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-f72957e0;rport=5061
+	Max-Forwards: 69
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	Contact: <sip:123001@192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 INVITE
+	Expires: 240
+	Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER
+	Content-Type: application/sdp
+	Supported: replaces
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	Authorization: Digest username="123001",realm="sip-3.performance",nonce="1540996729:1c5bb2e03c5e2d1fae35407d9ebe1344ae852389",uri="sip:123002@192.168.67.224",algorithm=MD5,response="e940af0b2865711c89b6edfe63b98e05"
+	PortaOne-Requested-URI: sip:123002@192.168.67.224
+	PortaSIP-Notify: NAT=192.168.64.92;NAT-type=4
+	Content-Length: 403
+	
+	v=0
+	o=- 124529722 124529722 IN IP4 192.168.64.92
+	s=-
+	c=IN IP4 192.168.64.92
+	t=0 0
+	m=audio 16478 RTP/AVP 0 2 4 8 18 96 97 98 101
+	a=rtpmap:0 PCMU/8000
+	a=rtpmap:2 G726-32/8000
+	a=rtpmap:4 G723/8000
+	a=rtpmap:8 PCMA/8000
+	a=rtpmap:18 G729a/8000
+	a=rtpmap:96 G726-40/8000
+	a=rtpmap:97 G726-24/8000
+	a=rtpmap:98 G726-16/8000
+	a=rtpmap:101 telephone-event/8000
+	a=fmtp:101 0-15
+	a=ptime:30
+	a=sendrecv
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.430452 DiagramText:b2bua[4362] Found dynamic SP for 'caller': {} DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.430452Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|35| Found dynamic SP for 'caller': {}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.440590 DiagramText:(A.? 102/I) 100 Trying DialogID:A.? Level:1 MessageClass:code_1xx Operation:send ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.440590Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|629| SENDING message to UDP:192.168.67.224:5060 from UDP:192.168.67.223:5070:
+	SIP/2.0 100 Trying
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---96f0641a36d849341271f723ec21dfc5;rport=5060
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-f72957e0;rport=5061
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 INVITE
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	To: <sip:123002@192.168.67.224>
+	Server: PortaSIP
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.447393 DiagramText:b2bua[4362] Source conf-id is not trusted, generating new conf-id DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.447393Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|55| Source conf-id is not trusted, generating new conf-id
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.449566 DiagramText:Authorization request DialogID: Level:0 MessageClass:request Operation:send ParticipantFrom:b2bua/4362 ParticipantFromID:15212051187334408296 ParticipantTo:AAA ParticipantToID:11267130301079144019 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.449566Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IA|1331| sending AAA request:
+	b2bua_request_serial             = 40577BDA
+	User-Name                        = "123001"
+	Digest-Realm                     = "sip-3.performance"
+	Digest-Nonce                     = "1540996729:1c5bb2e03c5e2d1fae35407d9ebe1344ae852389"
+	Digest-Method                    = "INVITE"
+	Digest-URI                       = "sip:123002@192.168.67.224"
+	Digest-Algorithm                 = "MD5"
+	Digest-Username                  = "123001"
+	Digest-Response                  = "e940af0b2865711c89b6edfe63b98e05"
+	Calling-Station-Id               = "123001"
+	Called-Station-Id                = "123002"
+	h323-conf-id                     = "90DA6E94 F2288821 72D7C0EA B3815AF2"
+	call-id                          = "ab6d9db1-643c74bc@192.168.64.92"
+	h323-remote-address              = "192.168.64.92"
+	PortaOne-Transport-Protocol      = "SIP"
+	h323-ivr-out                     = "PortaBilling_AuthMethod:INVITE"
+	PortaOne-Service-Capabilities    = "routing=1;version=25.0;aaa=3"
+	h323-ivr-out                     = "PortaBilling_Seed:3657163663"
+	PortaOne-Calling-Party           = "display-id=123001;privacy=0"
+	h323-ivr-out                     = "PortaSIP_Aux_Info:auth_life=113078/1/0;auth_cnt=1;CC_now=113078/1;pid=4362;request_type=routing"
+	h323-ivr-out                     = "PortaBilling_Authorize:base=session-time;min=120;max=600"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.451694 DiagramText:(A.? 102/I) 100 Trying DialogID:A.? Level:0 MessageClass:code_1xx Operation:receive ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.451694Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|630| RECEIVED message from UDP:192.168.67.223:5070 at UDP:192.168.67.224:5060:
+	SIP/2.0 100 Trying
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---96f0641a36d849341271f723ec21dfc5;rport=5060
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-f72957e0;rport=5061
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 INVITE
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Server: PortaSIP
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:49.453554 DiagramText:(A.? 102/I) 100 Trying DialogID:A.? Level:0 MessageClass:code_1xx Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.64.92:5061 ParticipantToID:4852480525443325197 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:49.453554Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|520| SENDING message to UDP:192.168.64.92:5061 from UDP:192.168.67.224:5060:
+	SIP/2.0 100 Trying
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-f72957e0;rport=5061
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 INVITE
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Server: PortaSIP
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.065431 DiagramText:Authorization request DialogID: Level:0 MessageClass:request Operation:receive ParticipantFrom:AAA ParticipantFromID:11267130301079144019 ParticipantTo:b2bua/4362 ParticipantToID:15212051187334408296 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.065431Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IA|1928| AAA request accepted, processing response:
+	b2bua_request_serial             = 40577BDA
+	h323-return-code                 = "0"
+	h323-ivr-in                      = "DURATION:600"
+	h323-ivr-in                      = "PortaBilling_CompleteNumber:123002"
+	h323-ivr-in                      = "PortaBilling_NodeId:192.168.67.224"
+	h323-ivr-in                      = "PortaBilling_AccessCode:OUTGOING"
+	h323-ivr-in                      = "PortaBilling_Seed:3657163663"
+	h323-ivr-in                      = "PortaBilling_RatePattern:VOICEONNET\RX|123002"
+	h323-ivr-in                      = "PortaBilling_Authorize:base=session-time;avail=600;retained=599993400;expires=1540997359"
+	h323-ivr-in                      = "Product:BE_Product_010"
+	h323-ivr-in                      = "Tariff:SIP %28local termination%29"
+	h323-billing-model               = "0"
+	PortaOne-Service-Features        = "moh=1;rec=1;rec-redirecting=1;rtpp-level=3"
+	h323-credit-time                 = "599994000"
+	PortaOne-Calling-Party           = "site=30;bill-to=123001;x=30;net=0;x-id=777"
+	PortaOne-Called-Party            = "site=30;bill-to=123002;x=30;net=0;x-id=000"
+	h323-currency                    = "USD"
+	h323-preferred-lang              = "en"
+	Framed-Route                     = "r=;g-hunt=seq"
+	Framed-Route                     = "p_=SIP-UA;gwname=SIP-UA;expires=0;clit=1;rtpp-level=0;moh=1;patience=6;grp=-"
+	Framed-Route                     = "r_=;bill-to=123002;rate-pattern=INCOMING%5CNRX|123002;access-code=INCOMING;h323-cid=1"
+	Framed-Route                     = "p__=SIP-UA;gwname=SIP-UA;expires=300;t-cli=777;rtpp-level=3;moh=1;patience=6;grp=-;rec=1"
+	Framed-Route                     = "r__=;rate-pattern=UMRECORD|123002;access-code=FOLLOWME;f.bill-to=123002;f.net=0;f.x=30;f.s=30;f.x-id=000;fcli=123002;h323-cid=2;delay=0"
+	Framed-Route                     = "p___=INTERNAL;gwname=INTERNAL;expires=300;clit=1;moh=1;patience=6;auto-answer=1;app-type=UMRECORD"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.066667 DiagramText:b2bua[4362] Do dialog event subscription lookup for user='123001' DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.066667Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|55| Do dialog event subscription lookup for user='123001'
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.067163 DiagramText:b2bua[4362] Do call control subscription lookup for centrex_id=30 and user=123001 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.067163Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|71| Do call control subscription lookup for centrex_id=30 and user=123001
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.067272 DiagramText:b2bua[4362] Do call control subscription lookup for centrex_id=30 and user=123002 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.067272Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|71| Do call control subscription lookup for centrex_id=30 and user=123002
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.081386 DiagramText:b2bua[4362] Call control subscription lookup result for centrex_id=30 and account_id=123001: False DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.081386Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|88| Call control subscription lookup result for centrex_id=30 and account_id=123001: False
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.082238 DiagramText:b2bua[4362] Call control subscription lookup result for centrex_id=30 and account_id=123002: False DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.082238Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|88| Call control subscription lookup result for centrex_id=30 and account_id=123002: False
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.083195 DiagramText:b2bua[4362] Final set of SP options for 'caller': {'sip.keep_alive_interval': 0} DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.083195Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|70| Final set of SP options for 'caller': {'sip.keep_alive_interval': 0}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.088090 DiagramText:b2bua[4362] New calling state seqnum=2 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.088090Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|28| New calling state seqnum=2
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.090992 DiagramText:b2bua[4362] Final set of SP options for 'route(2, 0)': {} DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.090992Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|47| Final set of SP options for 'route(2, 0)': {}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.092545 DiagramText:b2bua[4362] Do call control subscription lookup for centrex_id='30' and user='123002' (route seq=(4, 0)) DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.092545Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|94| Do call control subscription lookup for centrex_id='30' and user='123002' (route seq=(4, 0))
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.101100 DiagramText:b2bua[4362] Call control subscription lookup result for centrex_id=30 and account_id=123002: False DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.101100Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|88| Call control subscription lookup result for centrex_id=30 and account_id=123002: False
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.101433 DiagramText:b2bua[4362] Do location lookup for user '123002'(route seq=(4, 0)) DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.101433Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|56| Do location lookup for user '123002'(route seq=(4, 0))
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.102285 DiagramText:b2bua[4362] Do dialog event subscription lookup for user '123002' (route seq=(4, 0)) DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.102285Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|74| Do dialog event subscription lookup for user '123002' (route seq=(4, 0))
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.115186 DiagramText:b2bua[4362] Location lookup result for user '123002' (route seq=(4, 0)): proxy='192.168.67.224', registration_host='192.168.67.224', NAT=True, ip_ver=4, UA='Linphone/3.9.1 (belle-sip/1.4.2)', UA contact='sip:123002@192.168.64.50;transport=udp', path_vector='<sip:192.168.67.224;lr;ob;pinhole=UDP:192.168.64.50:5060;ep>' DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.115186Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|309| Location lookup result for user '123002' (route seq=(4, 0)): proxy='192.168.67.224', registration_host='192.168.67.224', NAT=True, ip_ver=4, UA='Linphone/3.9.1 (belle-sip/1.4.2)', UA contact='sip:123002@192.168.64.50;transport=udp', path_vector='<sip:192.168.67.224;lr;ob;pinhole=UDP:192.168.64.50:5060;ep>'
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.116010 DiagramText:b2bua[4362] Call control subscription lookup result for centrex_id=30 and account_id=123002: False DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.116010Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|88| Call control subscription lookup result for centrex_id=30 and account_id=123002: False
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.118375 DiagramText:b2bua[4362] Found dynamic SP for 'route-(4, 1)': {} DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.118375Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|41| Found dynamic SP for 'route-(4, 1)': {}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.119548 DiagramText:b2bua[4362] Final set of SP options for 'route(4, 1)': {} DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.119548Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|47| Final set of SP options for 'route(4, 1)': {}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.123768 DiagramText:b2bua[4362] new leg call-id: ab6d9db1-643c74bc@192.168.64.92 DialogID: Level:1 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.123768Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|50| new leg call-id: ab6d9db1-643c74bc@192.168.64.92
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.126576 DiagramText:b2bua[4362] Use rtpproxy = True DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.126576Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|168| Use rtpproxy = True
+	(calculated=(True, ALWAYS) OR
+	recording=True OR
+	legal_intercept=False OR
+	dtmf_detection=False OR
+	to_local_IVR=False OR
+	encryption/decryption=False
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.132662 DiagramText:cmd-id=06FF/sid=1/side=a set_stream DialogID: Level:0 MessageClass:request Operation:send ParticipantFrom:b2bua/4362 ParticipantFromID:15212051187334408296 ParticipantTo:rtpproxy/4367 ParticipantToID:3588470149688686176 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.132662Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IR|408| Sending command to rtpproxy/4367:
+	{
+	    "acodec_list": "_:ptime=30,pcmu:0:8000,g726-32:2:8000,g723:4:8000,pcma:8:8000,g729a:18:8000,g726-40:96:8000,g726-24:97:8000,g726-16:98:8000,telephone-event:101:8000:0-15",
+	    "command": "set_stream",
+	    "cookie": "c00kie_000006FF",
+	    "ip": "192.168.64.92",
+	    "port": "16478",
+	    "side": "a",
+	    "stream": "1",
+	    "xid": "ab6d9db1-643c74bc@192.168.64.92;2"
+	}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.133523 DiagramText:rtpproxy[4367] handling command "c00kie_000006FF set_stream side=a ip=192.168.64.92 port=16478 stream=1 xid=ab6d9db1-643c74bc@192.168.64.92;2 acodec_list=_:ptime=30,pcmu:0:8000,g726-32:2:8000,g723:4:8000,pcma:8:8000,g729a:18:8000,g726-40:96:8000,g726-24:97:8000,g726-16:98:8000,telephone-event:101:8000:0-15" DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.133523Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|DR|295| handling command "c00kie_000006FF set_stream side=a ip=192.168.64.92 port=16478 stream=1 xid=ab6d9db1-643c74bc@192.168.64.92;2 acodec_list=_:ptime=30,pcmu:0:8000,g726-32:2:8000,g723:4:8000,pcma:8:8000,g729a:18:8000,g726-40:96:8000,g726-24:97:8000,g726-16:98:8000,telephone-event:101:8000:0-15"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.134030 DiagramText:rtpproxy[4367] session creation requested: stream 1, side a, remote ip 192.168.64.92 and port 16478 DialogID: Level:1 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.134030Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|86| session creation requested: stream 1, side a, remote ip 192.168.64.92 and port 16478
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.134105 DiagramText:rtpproxy[4367] pre-filling caller's address with 192.168.64.92:16478 DialogID: Level:1 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.134105Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|55| pre-filling caller's address with 192.168.64.92:16478
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.136084 DiagramText:rtpproxy[4367] session created: stream 1, side a, another side local port 35516 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.136084Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|66| session created: stream 1, side a, another side local port 35516
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.136112 DiagramText:rtpproxy[4367] sending reply: "c00kie_000006FF 35516 192.168.67.223" DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.136112Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|DR|55| sending reply: "c00kie_000006FF 35516 192.168.67.223"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.137312 DiagramText:cmd-id=06FF OK DialogID: Level:0 MessageClass:request Operation:receive ParticipantFrom:rtpproxy/4367 ParticipantFromID:3588470149688686176 ParticipantTo:b2bua/4362 ParticipantToID:15212051187334408296 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.137312Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IR|139| Receiving answer from rtpproxy/4367:
+	{
+	    "answer": [
+	        "35516",
+	        "192.168.67.223"
+	    ],
+	    "cookie": "c00kie_000006FF"
+	}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.144277 DiagramText:(B.? 795/I) INVITE DialogID:B.? Level:1 MessageClass:request Operation:send ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.144277Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|1323| SENDING message to UDP:192.168.67.224:5060 from UDP:192.168.67.223:5070:
+	INVITE sip:123002@192.168.64.50;transport=udp SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport;branch=z9hG4bK-n2vuup2xnxbmrzui
+	Route: <sip:192.168.67.224;lr;ob;pinhole=UDP:192.168.64.50:5060;ep>
+	Max-Forwards: 70
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 INVITE
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	To: <sip:123002@192.168.67.224>
+	Contact: sip:192.168.67.223:5070
+	Expires: 300
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	User-Agent: PortaSIP
+	cisco-GUID: 2472119662-792506170-3517290633-3517290633
+	h323-conf-id: 2472119662-792506170-3517290633-3517290633
+	P-Asserted-Identity: <sip:123001@192.168.67.224>
+	Remote-Party-ID: <sip:123001@192.168.67.224>;party=calling
+	Content-disposition: session
+	Content-Length: 413
+	Content-Type: application/sdp
+	
+	v=0
+	o=PortaSIP 582387968832756331 1 IN IP4 192.168.67.223
+	s=-
+	t=0 0
+	m=audio 35516 RTP/AVP 0 2 4 8 18 96 97 98 101
+	c=IN IP4 192.168.67.223
+	a=rtpmap:0 PCMU/8000
+	a=rtpmap:2 G726-32/8000
+	a=rtpmap:4 G723/8000
+	a=rtpmap:8 PCMA/8000
+	a=rtpmap:18 G729a/8000
+	a=rtpmap:96 G726-40/8000
+	a=rtpmap:97 G726-24/8000
+	a=rtpmap:98 G726-16/8000
+	a=rtpmap:101 telephone-event/8000
+	a=fmtp:101 0-15
+	a=ptime:30
+	a=sendrecv
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.147221 DiagramText:(B.? 795/I) INVITE DialogID:B.? Level:0 MessageClass:request Operation:receive ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.147221Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|1329| RECEIVED message from UDP:192.168.67.223:5070 at UDP:192.168.67.224:5060:
+	INVITE sip:123002@192.168.64.50;transport=udp SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-n2vuup2xnxbmrzui
+	Max-Forwards: 70
+	Route: <sip:192.168.67.224;lr;ob;pinhole=UDP:192.168.64.50:5060;ep>
+	Contact: sip:192.168.67.223:5070
+	To: <sip:123002@192.168.67.224>
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 INVITE
+	Expires: 300
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Content-Disposition: session
+	Content-Type: application/sdp
+	User-Agent: PortaSIP
+	P-Asserted-Identity: <sip:123001@192.168.67.224>
+	Remote-Party-ID: <sip:123001@192.168.67.224>;party=calling
+	cisco-GUID: 2472119662-792506170-3517290633-3517290633
+	h323-conf-id: 2472119662-792506170-3517290633-3517290633
+	Content-Length: 413
+	
+	v=0
+	o=PortaSIP 582387968832756331 1 IN IP4 192.168.67.223
+	s=-
+	t=0 0
+	m=audio 35516 RTP/AVP 0 2 4 8 18 96 97 98 101
+	c=IN IP4 192.168.67.223
+	a=rtpmap:0 PCMU/8000
+	a=rtpmap:2 G726-32/8000
+	a=rtpmap:4 G723/8000
+	a=rtpmap:8 PCMA/8000
+	a=rtpmap:18 G729a/8000
+	a=rtpmap:96 G726-40/8000
+	a=rtpmap:97 G726-24/8000
+	a=rtpmap:98 G726-16/8000
+	a=rtpmap:101 telephone-event/8000
+	a=fmtp:101 0-15
+	a=ptime:30
+	a=sendrecv
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.147924 DiagramText:(B.? 795/I) INVITE DialogID:B.? Level:0 MessageClass:request Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.64.50:5060 ParticipantToID:16417977739822169429 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.147924Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|1434| SENDING message to UDP:192.168.64.50:5060 from UDP:192.168.67.224:5060:
+	INVITE sip:123002@192.168.64.50;transport=udp SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---2ecde3e8073afbb092672dac022b13f6;rport
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-n2vuup2xnxbmrzui
+	Max-Forwards: 69
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>
+	Contact: sip:192.168.67.223:5070
+	To: <sip:123002@192.168.67.224>
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 INVITE
+	Expires: 300
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Content-Disposition: session
+	Content-Type: application/sdp
+	User-Agent: PortaSIP
+	P-Asserted-Identity: <sip:123001@192.168.67.224>
+	Remote-Party-ID: <sip:123001@192.168.67.224>;party=calling
+	cisco-GUID: 2472119662-792506170-3517290633-3517290633
+	h323-conf-id: 2472119662-792506170-3517290633-3517290633
+	Content-Length: 413
+	
+	v=0
+	o=PortaSIP 582387968832756331 1 IN IP4 192.168.67.223
+	s=-
+	t=0 0
+	m=audio 35516 RTP/AVP 0 2 4 8 18 96 97 98 101
+	c=IN IP4 192.168.67.223
+	a=rtpmap:0 PCMU/8000
+	a=rtpmap:2 G726-32/8000
+	a=rtpmap:4 G723/8000
+	a=rtpmap:8 PCMA/8000
+	a=rtpmap:18 G729a/8000
+	a=rtpmap:96 G726-40/8000
+	a=rtpmap:97 G726-24/8000
+	a=rtpmap:98 G726-16/8000
+	a=rtpmap:101 telephone-event/8000
+	a=fmtp:101 0-15
+	a=ptime:30
+	a=sendrecv
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.212394 DiagramText:(B.? 795/I) 100 Trying DialogID:B.? Level:0 MessageClass:code_1xx Operation:receive ParticipantFrom:UDP:192.168.64.50:5060 ParticipantFromID:16417977739822169429 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.212394Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|446| RECEIVED message from UDP:192.168.64.50:5060 at UDP:192.168.67.224:5060:
+	SIP/2.0 100 Trying
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---2ecde3e8073afbb092672dac022b13f6;rport
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-n2vuup2xnxbmrzui
+	To: sip:123002@192.168.67.224
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 INVITE
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.214401 DiagramText:(B.? 795/I) 100 Trying DialogID:B.? Level:1 MessageClass:code_1xx Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.214401Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|343| SENDING message to UDP:192.168.67.223:5070 from UDP:192.168.67.224:5060:
+	SIP/2.0 100 Trying
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-n2vuup2xnxbmrzui
+	To: sip:123002@192.168.67.224
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 INVITE
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.241525 DiagramText:(B.? 795/I) 100 Trying DialogID:B.? Level:0 MessageClass:code_1xx Operation:receive ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.241525Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|344| RECEIVED message from UDP:192.168.67.224:5060 at UDP:192.168.67.223:5070:
+	SIP/2.0 100 Trying
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-n2vuup2xnxbmrzui
+	To: sip:123002@192.168.67.224
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 INVITE
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.250583 DiagramText:(B.a 795/I) 180 Ringing DialogID:B.a Level:0 MessageClass:code_1xx Operation:receive ParticipantFrom:UDP:192.168.64.50:5060 ParticipantFromID:16417977739822169429 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.250583Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|611| RECEIVED message from UDP:192.168.64.50:5060 at UDP:192.168.67.224:5060:
+	SIP/2.0 180 Ringing
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---2ecde3e8073afbb092672dac022b13f6;rport
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-n2vuup2xnxbmrzui
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 INVITE
+	Supported: replaces, outbound
+	User-Agent: Linphone/3.9.1 (belle-sip/1.4.2)
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.252747 DiagramText:(B.a 795/I) 180 Ringing DialogID:B.a Level:1 MessageClass:code_1xx Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.252747Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|508| SENDING message to UDP:192.168.67.223:5070 from UDP:192.168.67.224:5060:
+	SIP/2.0 180 Ringing
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-n2vuup2xnxbmrzui
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 INVITE
+	Supported: replaces, outbound
+	User-Agent: Linphone/3.9.1 (belle-sip/1.4.2)
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.279530 DiagramText:(B.a 795/I) 180 Ringing DialogID:B.a Level:0 MessageClass:code_1xx Operation:receive ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.279530Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|509| RECEIVED message from UDP:192.168.67.224:5060 at UDP:192.168.67.223:5070:
+	SIP/2.0 180 Ringing
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-n2vuup2xnxbmrzui
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 INVITE
+	Supported: replaces, outbound
+	User-Agent: Linphone/3.9.1 (belle-sip/1.4.2)
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.290773 DiagramText:(A.a 102/I) 180 Ringing DialogID:A.a Level:1 MessageClass:code_1xx Operation:send ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.290773Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|687| SENDING message to UDP:192.168.67.224:5060 from UDP:192.168.67.223:5070:
+	SIP/2.0 180 Ringing
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---96f0641a36d849341271f723ec21dfc5;rport=5060
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-f72957e0;rport=5061
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 INVITE
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	Contact: sip:192.168.67.223:5070
+	Server: PortaSIP
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.293242 DiagramText:(A.a 102/I) 180 Ringing DialogID:A.a Level:0 MessageClass:code_1xx Operation:receive ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.293242Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|688| RECEIVED message from UDP:192.168.67.223:5070 at UDP:192.168.67.224:5060:
+	SIP/2.0 180 Ringing
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---96f0641a36d849341271f723ec21dfc5;rport=5060
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-f72957e0;rport=5061
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	Contact: sip:192.168.67.223:5070
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 INVITE
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Server: PortaSIP
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:50.296039 DiagramText:(A.a 102/I) 180 Ringing DialogID:A.a Level:0 MessageClass:code_1xx Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.64.92:5061 ParticipantToID:4852480525443325197 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:50.296039Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|578| SENDING message to UDP:192.168.64.92:5061 from UDP:192.168.67.224:5060:
+	SIP/2.0 180 Ringing
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-f72957e0;rport=5061
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	Contact: sip:192.168.67.223:5070
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 INVITE
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Server: PortaSIP
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.352724 DiagramText:(B.a 795/I) 200 Ok DialogID:B.a Level:0 MessageClass:code_2xx Operation:receive ParticipantFrom:UDP:192.168.64.50:5060 ParticipantFromID:16417977739822169429 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.352724Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|995| RECEIVED message from UDP:192.168.64.50:5060 at UDP:192.168.67.224:5060:
+	SIP/2.0 200 Ok
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---2ecde3e8073afbb092672dac022b13f6;rport
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-n2vuup2xnxbmrzui
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>
+	Contact: <sip:123002@192.168.64.50;transport=udp>;+sip.instance="<urn:uuid:a1fdfbfb-d1af-42e2-b5ec-d514ac07eb10>"
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 INVITE
+	Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, NOTIFY, MESSAGE, SUBSCRIBE, INFO, UPDATE
+	Content-Type: application/sdp
+	Supported: replaces, outbound
+	User-Agent: Linphone/3.9.1 (belle-sip/1.4.2)
+	Content-Length: 150
+	
+	v=0
+	o=123002 3741 3136 IN IP4 192.168.64.50
+	s=Talk
+	c=IN IP4 192.168.64.50
+	t=0 0
+	m=audio 7078 RTP/AVP 0 8 101
+	a=rtpmap:101 telephone-event/8000
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.353553 DiagramText:(B.a 795/I) 200 Ok DialogID:B.a Level:1 MessageClass:code_2xx Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.353553Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|939| SENDING message to UDP:192.168.67.223:5070 from UDP:192.168.67.224:5060:
+	SIP/2.0 200 Ok
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-n2vuup2xnxbmrzui
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>
+	Contact: <sip:123002@192.168.64.50;transport=udp>;+sip.instance="<urn:uuid:a1fdfbfb-d1af-42e2-b5ec-d514ac07eb10>"
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 INVITE
+	Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, NOTIFY, MESSAGE, SUBSCRIBE, INFO, UPDATE
+	Content-Type: application/sdp
+	Supported: replaces, outbound
+	User-Agent: Linphone/3.9.1 (belle-sip/1.4.2)
+	PortaSIP-Notify: NAT=192.168.64.50;NAT-type=4
+	Content-Length: 150
+	
+	v=0
+	o=123002 3741 3136 IN IP4 192.168.64.50
+	s=Talk
+	c=IN IP4 192.168.64.50
+	t=0 0
+	m=audio 7078 RTP/AVP 0 8 101
+	a=rtpmap:101 telephone-event/8000
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.383337 DiagramText:(B.a 795/I) 200 Ok DialogID:B.a Level:0 MessageClass:code_2xx Operation:receive ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.383337Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|940| RECEIVED message from UDP:192.168.67.224:5060 at UDP:192.168.67.223:5070:
+	SIP/2.0 200 Ok
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-n2vuup2xnxbmrzui
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>
+	Contact: <sip:123002@192.168.64.50;transport=udp>;+sip.instance="<urn:uuid:a1fdfbfb-d1af-42e2-b5ec-d514ac07eb10>"
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 INVITE
+	Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, NOTIFY, MESSAGE, SUBSCRIBE, INFO, UPDATE
+	Content-Type: application/sdp
+	Supported: replaces, outbound
+	User-Agent: Linphone/3.9.1 (belle-sip/1.4.2)
+	PortaSIP-Notify: NAT=192.168.64.50;NAT-type=4
+	Content-Length: 150
+	
+	v=0
+	o=123002 3741 3136 IN IP4 192.168.64.50
+	s=Talk
+	c=IN IP4 192.168.64.50
+	t=0 0
+	m=audio 7078 RTP/AVP 0 8 101
+	a=rtpmap:101 telephone-event/8000
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.397245 DiagramText:Accounting (start/orig) DialogID: Level:0 MessageClass:request Operation:send ParticipantFrom:b2bua/4362 ParticipantFromID:15212051187334408296 ParticipantTo:AAA ParticipantToID:11267130301079144019 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.397245Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IA|1625| sending Acct Start (Originate):
+	h323-call-origin                 = "originate"
+	h323-call-type                   = "VoIP"
+	PortaOne-Transport-Protocol      = "SIP"
+	h323-setup-time                  = "14:38:50.120 GMT Wed Oct 31 2018"
+	User-Name                        = "123002"
+	Calling-Station-Id               = "123001"
+	Called-Station-Id                = "123002"
+	h323-conf-id                     = "93598D6E 2F3CAF3A D1A59889 D1A59889"
+	call-id                          = "ab6d9db1-643c74bc@192.168.64.92"
+	Acct-Session-Id                  = "ab6d9db1-643c74bc@192.168.64.92"
+	h323-remote-address              = "SIP-UA"
+	h323-incoming-conf-id            = "90DA6E94 F2288821 72D7C0EA B3815AF2"
+	h323-ivr-out                     = "PortaSIP_Aux_Info:CC=113078/2;route_seq=(4, 1);route_id=140218909909864;cc_id=140218909909360;pid=4362"
+	h323-ivr-out                     = "PortaBilling_RatePattern:INCOMING\NRX|123002"
+	h323-ivr-out                     = "PortaBilling_AccessCode:INCOMING"
+	h323-ivr-out                     = "PortaBilling_Seed:3657163663"
+	h323-remote-id                   = "SIP-UA"
+	PortaOne-Media-Info              = "direction=in;type=audio/PCMU;proxy=1;bitrate=64000;ptime=30"
+	PortaOne-Media-Info              = "direction=out;type=audio/PCMU;proxy=1;bitrate=64000;ptime=20"
+	PortaOne-Calling-Party           = "x=30;x-id=777;bill-to=123001;net=0;site=30"
+	PortaOne-Called-Party            = "x=30;x-id=000;bill-to=123002;media-time=0;net=0;site=30"
+	h323-connect-time                = "14:38:52.396 GMT Wed Oct 31 2018"
+	Acct-Status-Type                 = "Start"
+	Event-Timestamp                  = "1540996732"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.456127 DiagramText:Accounting (start/orig) DialogID: Level:0 MessageClass:request Operation:send ParticipantFrom:b2bua/4362 ParticipantFromID:15212051187334408296 ParticipantTo:AAA ParticipantToID:11267130301079144019 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.456127Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IA|1358| sending Acct Start (Originate):
+	h323-call-origin                 = "originate"
+	h323-call-type                   = "VoIP"
+	PortaOne-Transport-Protocol      = "SIP"
+	h323-setup-time                  = "14:38:50.091 GMT Wed Oct 31 2018"
+	User-Name                        = "123001"
+	Calling-Station-Id               = "123001"
+	Called-Station-Id                = "123002"
+	h323-conf-id                     = "90DA6E94 F2288821 72D7C0EA B3815AF2"
+	call-id                          = "ab6d9db1-643c74bc@192.168.64.92"
+	Acct-Session-Id                  = "ab6d9db1-643c74bc@192.168.64.92"
+	h323-remote-address              = "SIP-UA"
+	h323-ivr-out                     = "PortaSIP_Aux_Info:CC=113078/2;route_seq=(2, 0);route_id=140218909909528;cc_id=140218909909360;pid=4362"
+	h323-ivr-out                     = "PortaBilling_RatePattern:VOICEONNET\RX|123002"
+	h323-ivr-out                     = "PortaBilling_AccessCode:OUTGOING"
+	h323-ivr-out                     = "PortaBilling_Seed:3657163663"
+	h323-remote-id                   = "SIP-UA"
+	PortaOne-Calling-Party           = "x=30;x-id=777;bill-to=123001;media-time=0;net=0;site=30"
+	PortaOne-Called-Party            = "x=30;x-id=000;bill-to=123002;net=0;site=30"
+	h323-connect-time                = "14:38:52.455 GMT Wed Oct 31 2018"
+	Acct-Status-Type                 = "Start"
+	Event-Timestamp                  = "1540996732"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.549519 DiagramText:(B.a 795/A) ACK DialogID:B.a Level:1 MessageClass:ACK_request Operation:send ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.549519Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|604| SENDING message to UDP:192.168.67.224:5060 from UDP:192.168.67.223:5070:
+	ACK sip:123002@192.168.64.50;transport=udp SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport;branch=z9hG4bK-65bkvaepjlthwblh
+	Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>
+	Max-Forwards: 70
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 ACK
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	Contact: sip:192.168.67.223:5070
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+	User-Agent: PortaSIP
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.552095 DiagramText:cmd-id=0700/sid=1/side=b set_stream DialogID: Level:0 MessageClass:request Operation:send ParticipantFrom:b2bua/4362 ParticipantFromID:15212051187334408296 ParticipantTo:rtpproxy/4367 ParticipantToID:3588470149688686176 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.552095Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IR|302| Sending command to rtpproxy/4367:
+	{
+	    "acodec_list": "pcmu:0:8000,pcma:8:8000,telephone-event:101:8000",
+	    "command": "set_stream",
+	    "cookie": "c00kie_00000700",
+	    "ip": "192.168.64.50",
+	    "port": "7078",
+	    "side": "b",
+	    "stream": "1",
+	    "xid": "ab6d9db1-643c74bc@192.168.64.92;2"
+	}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.553001 DiagramText:rtpproxy[4367] handling command "c00kie_00000700 set_stream side=b ip=192.168.64.50 port=7078 stream=1 xid=ab6d9db1-643c74bc@192.168.64.92;2 acodec_list=pcmu:0:8000,pcma:8:8000,telephone-event:101:8000" DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.553001Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|DR|189| handling command "c00kie_00000700 set_stream side=b ip=192.168.64.50 port=7078 stream=1 xid=ab6d9db1-643c74bc@192.168.64.92;2 acodec_list=pcmu:0:8000,pcma:8:8000,telephone-event:101:8000"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.553220 DiagramText:rtpproxy[4367] session update requested: stream 1, side b, remote ip 192.168.64.50 and port 7078 DialogID: Level:1 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.553220Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|83| session update requested: stream 1, side b, remote ip 192.168.64.50 and port 7078
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.553233 DiagramText:rtpproxy[4367] RTP stats: 0 in from caller, 0 in from callee, 0 relayed, 0 dropped, stream 1 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.553233Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|79| RTP stats: 0 in from caller, 0 in from callee, 0 relayed, 0 dropped, stream 1
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.553239 DiagramText:rtpproxy[4367] RTCP stats: 0 in from caller, 0 in from callee, 0 relayed, 0 dropped, stream 1 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.553239Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|80| RTCP stats: 0 in from caller, 0 in from callee, 0 relayed, 0 dropped, stream 1
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.553292 DiagramText:rtpproxy[4367] pre-filling callee's address with 192.168.64.50:7078 DialogID: Level:1 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.553292Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|54| pre-filling callee's address with 192.168.64.50:7078
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.553348 DiagramText:rtpproxy[4367] session updated: stream 1, side b, another side local port 45426 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.553348Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|66| session updated: stream 1, side b, another side local port 45426
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.553359 DiagramText:rtpproxy[4367] sending reply: "c00kie_00000700 45426 192.168.67.223" DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.553359Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|DR|55| sending reply: "c00kie_00000700 45426 192.168.67.223"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.555706 DiagramText:cmd-id=0701/sid=1/side=* start_recording_stream DialogID: Level:0 MessageClass:request Operation:send ParticipantFrom:b2bua/4362 ParticipantFromID:15212051187334408296 ParticipantTo:rtpproxy/4367 ParticipantToID:3588470149688686176 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.555706Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IR|243| Sending command to rtpproxy/4367:
+	{
+	    "command": "start_recording_stream",
+	    "cookie": "c00kie_00000701",
+	    "rec_id": "3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-A",
+	    "stream": "1",
+	    "xid": "ab6d9db1-643c74bc@192.168.64.92;2"
+	}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.556695 DiagramText:cmd-id=0702/sid=1/side=* start_recording_stream DialogID: Level:0 MessageClass:request Operation:send ParticipantFrom:b2bua/4362 ParticipantFromID:15212051187334408296 ParticipantTo:rtpproxy/4367 ParticipantToID:3588470149688686176 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.556695Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IR|243| Sending command to rtpproxy/4367:
+	{
+	    "command": "start_recording_stream",
+	    "cookie": "c00kie_00000702",
+	    "rec_id": "3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-O",
+	    "stream": "1",
+	    "xid": "ab6d9db1-643c74bc@192.168.64.92;2"
+	}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.557609 DiagramText:rtpproxy[4367] handling command "c00kie_00000701 start_recording_stream rec_id=3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-A stream=1 xid=ab6d9db1-643c74bc@192.168.64.92;2" DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.557609Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|DR|160| handling command "c00kie_00000701 start_recording_stream rec_id=3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-A stream=1 xid=ab6d9db1-643c74bc@192.168.64.92;2"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.561374 DiagramText:rtpproxy[4367] starting recording RTP session on ports 45426/35516 with id (3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-A) DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.561374Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|110| starting recording RTP session on ports 45426/35516 with id (3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-A)
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.561652 DiagramText:rtpproxy[4367] starting recording RTCP session on ports 45427/35517 with id (3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-A) DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.561652Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|111| starting recording RTCP session on ports 45427/35517 with id (3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-A)
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.561748 DiagramText:rtpproxy[4367] sending reply: "c00kie_00000701 0" DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.561748Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|DR|36| sending reply: "c00kie_00000701 0"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.566725 DiagramText:rtpproxy[4367] handling command "c00kie_00000702 start_recording_stream rec_id=3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-O stream=1 xid=ab6d9db1-643c74bc@192.168.64.92;2" DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.566725Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|DR|160| handling command "c00kie_00000702 start_recording_stream rec_id=3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-O stream=1 xid=ab6d9db1-643c74bc@192.168.64.92;2"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.567174 DiagramText:rtpproxy[4367] starting recording RTP session on ports 45426/35516 with id (3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-O) DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.567174Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|110| starting recording RTP session on ports 45426/35516 with id (3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-O)
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.567374 DiagramText:rtpproxy[4367] starting recording RTCP session on ports 45427/35517 with id (3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-O) DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.567374Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|111| starting recording RTCP session on ports 45427/35517 with id (3ec81d8929c046e096f4681b8ae395534c2ad035=2-1-O)
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.567451 DiagramText:rtpproxy[4367] sending reply: "c00kie_00000702 0" DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.567451Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|DR|36| sending reply: "c00kie_00000702 0"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.570746 DiagramText:(B.a 795/A) ACK DialogID:B.a Level:0 MessageClass:ACK_request Operation:receive ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.570746Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|610| RECEIVED message from UDP:192.168.67.223:5070 at UDP:192.168.67.224:5060:
+	ACK sip:123002@192.168.64.50;transport=udp SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-65bkvaepjlthwblh
+	Max-Forwards: 70
+	Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>
+	Contact: sip:192.168.67.223:5070
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 ACK
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+	User-Agent: PortaSIP
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.571586 DiagramText:(B.a 795/A) ACK DialogID:B.a Level:0 MessageClass:ACK_request Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.64.50:5060 ParticipantToID:16417977739822169429 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.571586Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|645| SENDING message to UDP:192.168.64.50:5060 from UDP:192.168.67.224:5060:
+	ACK sip:123002@192.168.64.50;transport=udp SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---dcaa0308b455aa6379574fc1a3760231;rport
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-65bkvaepjlthwblh
+	Max-Forwards: 69
+	Contact: sip:192.168.67.223:5070
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 795 ACK
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+	User-Agent: PortaSIP
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.573002 DiagramText:cmd-id=0700 OK DialogID: Level:0 MessageClass:request Operation:receive ParticipantFrom:rtpproxy/4367 ParticipantFromID:3588470149688686176 ParticipantTo:b2bua/4362 ParticipantToID:15212051187334408296 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.573002Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IR|139| Receiving answer from rtpproxy/4367:
+	{
+	    "answer": [
+	        "45426",
+	        "192.168.67.223"
+	    ],
+	    "cookie": "c00kie_00000700"
+	}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.575134 DiagramText:cmd-id=0701 OK DialogID: Level:0 MessageClass:request Operation:receive ParticipantFrom:rtpproxy/4367 ParticipantFromID:3588470149688686176 ParticipantTo:b2bua/4362 ParticipantToID:15212051187334408296 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.575134Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IR|109| Receiving answer from rtpproxy/4367:
+	{
+	    "answer": [
+	        "0"
+	    ],
+	    "cookie": "c00kie_00000701"
+	}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.576056 DiagramText:rtpproxy[4367] first media packet received from callee 192.168.64.50:7078, stream 1 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.576056Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|70| first media packet received from callee 192.168.64.50:7078, stream 1
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.576120 DiagramText:rtpproxy[4367] first audio packet received from callee, stream 1, payload pcmu:0 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.576120Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|67| first audio packet received from callee, stream 1, payload pcmu:0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.577361 DiagramText:cmd-id=0702 OK DialogID: Level:0 MessageClass:request Operation:receive ParticipantFrom:rtpproxy/4367 ParticipantFromID:3588470149688686176 ParticipantTo:b2bua/4362 ParticipantToID:15212051187334408296 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.577361Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IR|109| Receiving answer from rtpproxy/4367:
+	{
+	    "answer": [
+	        "0"
+	    ],
+	    "cookie": "c00kie_00000702"
+	}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.580004 DiagramText:Accounting (start/answ) DialogID: Level:0 MessageClass:request Operation:send ParticipantFrom:b2bua/4362 ParticipantFromID:15212051187334408296 ParticipantTo:AAA ParticipantToID:11267130301079144019 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.580004Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IA|1292| sending Acct Start (Answer):
+	h323-call-origin                 = "answer"
+	h323-call-type                   = "VoIP"
+	PortaOne-Transport-Protocol      = "SIP"
+	h323-setup-time                  = "14:38:50.087 GMT Wed Oct 31 2018"
+	User-Name                        = "123001"
+	Calling-Station-Id               = "123001"
+	Called-Station-Id                = "123002"
+	h323-conf-id                     = "90DA6E94 F2288821 72D7C0EA B3815AF2"
+	call-id                          = "ab6d9db1-643c74bc@192.168.64.92"
+	Acct-Session-Id                  = "ab6d9db1-643c74bc@192.168.64.92"
+	h323-remote-address              = "192.168.64.92"
+	h323-ivr-out                     = "PortaBilling_AccessCode:OUTGOING"
+	h323-ivr-out                     = "PortaBilling_Seed:3657163663"
+	h323-ivr-out                     = "PortaSIP_Aux_Info:CC=113078/1;cc_id=140218909909360;pid=4362"
+	PortaOne-Called-Party            = "x=30;x-id=000;bill-to=123002;net=0;site=30"
+	PortaOne-Media-Info              = "direction=in;type=audio/PCMU;proxy=1;bitrate=64000;ptime=20"
+	PortaOne-Media-Info              = "direction=out;type=audio/PCMU;proxy=1;bitrate=64000;ptime=30"
+	h323-connect-time                = "14:38:52.580 GMT Wed Oct 31 2018"
+	Acct-Status-Type                 = "Start"
+	Event-Timestamp                  = "1540996732"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.580004 DiagramText:(A.a 102/I) 200 Ok DialogID:A.a Level:1 MessageClass:code_2xx Operation:send ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.580004Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|882| SENDING message to UDP:192.168.67.224:5060 from UDP:192.168.67.223:5070:
+	SIP/2.0 200 Ok
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---96f0641a36d849341271f723ec21dfc5;rport=5060
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-f72957e0;rport=5061
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 INVITE
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	Contact: sip:192.168.67.223:5070
+	Server: PortaSIP
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Content-Length: 167
+	Content-Type: application/sdp
+	
+	v=0
+	o=PortaSIP 2922910749222025166 1 IN IP4 192.168.67.223
+	s=Talk
+	t=0 0
+	m=audio 45426 RTP/AVP 0 8 101
+	c=IN IP4 192.168.67.223
+	a=rtpmap:101 telephone-event/8000
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.606029 DiagramText:(A.a 102/I) 200 Ok DialogID:A.a Level:0 MessageClass:code_2xx Operation:receive ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.606029Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|883| RECEIVED message from UDP:192.168.67.223:5070 at UDP:192.168.67.224:5060:
+	SIP/2.0 200 Ok
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---96f0641a36d849341271f723ec21dfc5;rport=5060
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-f72957e0;rport=5061
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	Contact: sip:192.168.67.223:5070
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 INVITE
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Content-Type: application/sdp
+	Server: PortaSIP
+	Content-Length: 167
+	
+	v=0
+	o=PortaSIP 2922910749222025166 1 IN IP4 192.168.67.223
+	s=Talk
+	t=0 0
+	m=audio 45426 RTP/AVP 0 8 101
+	c=IN IP4 192.168.67.223
+	a=rtpmap:101 telephone-event/8000
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.606330 DiagramText:rtpproxy[4367] callee stream 1 ptime: 30 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.606330Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|27| callee stream 1 ptime: 30
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.606615 DiagramText:(A.a 102/I) 200 Ok DialogID:A.a Level:0 MessageClass:code_2xx Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.64.92:5061 ParticipantToID:4852480525443325197 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.606615Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|773| SENDING message to UDP:192.168.64.92:5061 from UDP:192.168.67.224:5060:
+	SIP/2.0 200 Ok
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-f72957e0;rport=5061
+	Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	Contact: sip:192.168.67.223:5070
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 INVITE
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Content-Type: application/sdp
+	Server: PortaSIP
+	Content-Length: 167
+	
+	v=0
+	o=PortaSIP 2922910749222025166 1 IN IP4 192.168.67.223
+	s=Talk
+	t=0 0
+	m=audio 45426 RTP/AVP 0 8 101
+	c=IN IP4 192.168.67.223
+	a=rtpmap:101 telephone-event/8000
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.649194 DiagramText:(A.a 102/A) ACK DialogID:A.a Level:0 MessageClass:ACK_request Operation:receive ParticipantFrom:UDP:192.168.64.92:5061 ParticipantFromID:4852480525443325197 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.649194Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|745| RECEIVED message from UDP:192.168.64.92:5061 at UDP:192.168.67.224:5060:
+	ACK sip:192.168.67.223:5070 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-6ca4e98f
+	Max-Forwards: 70
+	Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	Contact: <sip:123001@192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 ACK
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	Authorization: Digest username="123001",realm="sip-3.performance",nonce="1540996729:1c5bb2e03c5e2d1fae35407d9ebe1344ae852389",uri="sip:123002@192.168.67.224",algorithm=MD5,response="e940af0b2865711c89b6edfe63b98e05"
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.650451 DiagramText:(A.a 102/A) ACK DialogID:A.a Level:1 MessageClass:ACK_request Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.650451Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|840| SENDING message to UDP:192.168.67.223:5070 from UDP:192.168.67.224:5060:
+	ACK sip:192.168.67.223:5070 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---d8c87f9eee55ad7b10ea8311c415a648;rport
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-6ca4e98f;rport=5061
+	Max-Forwards: 69
+	Contact: <sip:123001@192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 ACK
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	Authorization: Digest username="123001",realm="sip-3.performance",nonce="1540996729:1c5bb2e03c5e2d1fae35407d9ebe1344ae852389",uri="sip:123002@192.168.67.224",algorithm=MD5,response="e940af0b2865711c89b6edfe63b98e05"
+	PortaSIP-Notify: NAT=192.168.64.92;NAT-type=4
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.677404 DiagramText:(A.a 102/A) ACK DialogID:A.a Level:0 MessageClass:ACK_request Operation:receive ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.677404Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|841| RECEIVED message from UDP:192.168.67.224:5060 at UDP:192.168.67.223:5070:
+	ACK sip:192.168.67.223:5070 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---d8c87f9eee55ad7b10ea8311c415a648;rport
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-6ca4e98f;rport=5061
+	Max-Forwards: 69
+	Contact: <sip:123001@192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 102 ACK
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	Authorization: Digest username="123001",realm="sip-3.performance",nonce="1540996729:1c5bb2e03c5e2d1fae35407d9ebe1344ae852389",uri="sip:123002@192.168.67.224",algorithm=MD5,response="e940af0b2865711c89b6edfe63b98e05"
+	PortaSIP-Notify: NAT=192.168.64.92;NAT-type=4
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.680625 DiagramText:rtpproxy[4367] first media packet received from caller 192.168.64.92:16478, stream 1 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.680625Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|71| first media packet received from caller 192.168.64.92:16478, stream 1
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.680714 DiagramText:rtpproxy[4367] first audio packet received from caller, stream 1, payload pcmu:0 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.680714Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|67| first audio packet received from caller, stream 1, payload pcmu:0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.711958 DiagramText:rtpproxy[4367] caller stream 1 ptime: 30 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.711958Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|27| caller stream 1 ptime: 30
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:52.933423 DiagramText:rtpproxy[4367] first RTCP packet received from callee 192.168.64.50:7079, stream 1 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:52.933423Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|69| first RTCP packet received from callee 192.168.64.50:7079, stream 1
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:53.136085 DiagramText:rtpproxy[4367] caller's address filled in: 192.168.64.92:16478 (RTP) DialogID: Level:1 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:53.136085Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|55| caller's address filled in: 192.168.64.92:16478 (RTP)
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:55.554151 DiagramText:rtpproxy[4367] callee's address filled in: 192.168.64.50:7078 (RTP) DialogID: Level:1 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:55.554151Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|54| callee's address filled in: 192.168.64.50:7078 (RTP)
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:38:55.661429 DiagramText:rtpproxy[4367] callee's address filled in: 192.168.64.50:7079 (RTCP) DialogID: Level:1 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:38:55.661429Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|55| callee's address filled in: 192.168.64.50:7079 (RTCP)
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.939275 DiagramText:(A.a 103/B) BYE DialogID:A.a Level:0 MessageClass:request Operation:receive ParticipantFrom:UDP:192.168.64.92:5061 ParticipantFromID:4852480525443325197 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.939275Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|701| RECEIVED message from UDP:192.168.64.92:5061 at UDP:192.168.67.224:5060:
+	BYE sip:192.168.67.223:5070 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-b0c37077
+	Max-Forwards: 70
+	Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.92:5061>
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 103 BYE
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	Authorization: Digest username="123001",realm="sip-3.performance",nonce="1540996729:1c5bb2e03c5e2d1fae35407d9ebe1344ae852389",uri="sip:192.168.67.223:5070",algorithm=MD5,response="07e26285a8d6240c2475c3155c1d0243"
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.939983 DiagramText:(A.a 103/B) BYE DialogID:A.a Level:1 MessageClass:request Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.939983Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|796| SENDING message to UDP:192.168.67.223:5070 from UDP:192.168.67.224:5060:
+	BYE sip:192.168.67.223:5070 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---c5aa9959e1d497439eae5aaa7216c1b7;rport
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-b0c37077;rport=5061
+	Max-Forwards: 69
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 103 BYE
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	Authorization: Digest username="123001",realm="sip-3.performance",nonce="1540996729:1c5bb2e03c5e2d1fae35407d9ebe1344ae852389",uri="sip:192.168.67.223:5070",algorithm=MD5,response="07e26285a8d6240c2475c3155c1d0243"
+	PortaSIP-Notify: NAT=192.168.64.92;NAT-type=4
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.966951 DiagramText:(A.a 103/B) BYE DialogID:A.a Level:0 MessageClass:request Operation:receive ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.966951Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|797| RECEIVED message from UDP:192.168.67.224:5060 at UDP:192.168.67.223:5070:
+	BYE sip:192.168.67.223:5070 SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---c5aa9959e1d497439eae5aaa7216c1b7;rport
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-b0c37077;rport=5061
+	Max-Forwards: 69
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 103 BYE
+	User-Agent: Linksys/SPA942-6.1.5(a)
+	Authorization: Digest username="123001",realm="sip-3.performance",nonce="1540996729:1c5bb2e03c5e2d1fae35407d9ebe1344ae852389",uri="sip:192.168.67.223:5070",algorithm=MD5,response="07e26285a8d6240c2475c3155c1d0243"
+	PortaSIP-Notify: NAT=192.168.64.92;NAT-type=4
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.974286 DiagramText:(A.a 103/B) 200 OK DialogID:A.a Level:1 MessageClass:code_2xx Operation:send ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.974286Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|572| SENDING message to UDP:192.168.67.224:5060 from UDP:192.168.67.223:5070:
+	SIP/2.0 200 OK
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---c5aa9959e1d497439eae5aaa7216c1b7;rport=5060
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-b0c37077;rport=5061
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 103 BYE
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	Server: PortaSIP
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.976159 DiagramText:b2bua[4362] Answer leg disconnected DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.976159Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|25| Answer leg disconnected
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.977239 DiagramText:b2bua[4362] Disconnect in UA for Answer leg disconnected DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.977239Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IG|46| Disconnect in UA for Answer leg disconnected
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.981190 DiagramText:(B.a 796/B) BYE DialogID:B.a Level:1 MessageClass:request Operation:send ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.981190Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|726| SENDING message to UDP:192.168.67.224:5060 from UDP:192.168.67.223:5070:
+	BYE sip:123002@192.168.64.50;transport=udp SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport;branch=z9hG4bK-3roqu43myvk6rgm2
+	Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>
+	Max-Forwards: 70
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 796 BYE
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	Contact: sip:192.168.67.223:5070
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	User-Agent: PortaSIP
+	cisco-GUID: 2472119662-792506170-3517290633-3517290633
+	h323-conf-id: 2472119662-792506170-3517290633-3517290633
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.988865 DiagramText:cmd-id=0703/sid=1/side=* delete DialogID: Level:0 MessageClass:request Operation:send ParticipantFrom:b2bua/4362 ParticipantFromID:15212051187334408296 ParticipantTo:rtpproxy/4367 ParticipantToID:3588470149688686176 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.988865Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IR|163| Sending command to rtpproxy/4367:
+	{
+	    "command": "delete",
+	    "cookie": "c00kie_00000703",
+	    "stream": "0",
+	    "xid": "ab6d9db1-643c74bc@192.168.64.92;2"
+	}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.989778 DiagramText:rtpproxy[4367] handling command "c00kie_00000703 delete stream=0 xid=ab6d9db1-643c74bc@192.168.64.92;2" DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.989778Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|DR|90| handling command "c00kie_00000703 delete stream=0 xid=ab6d9db1-643c74bc@192.168.64.92;2"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.990030 DiagramText:rtpproxy[4367] forcefully deleting session on ports 45426/35516, stream 1 DialogID: Level:1 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.990030Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|60| forcefully deleting session on ports 45426/35516, stream 1
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.990044 DiagramText:pt:0 PCMU, 408 pkts, 13.226 DialogID: Level:0 MessageClass:request Operation:receive ParticipantFrom:UDP:192.168.64.92:5061 ParticipantFromID:4852480525443325197 ParticipantTo:rtpproxy/4367 ParticipantToID:3588470149688686176 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.990044Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|99| RTP stats from caller 192.168.64.92:16478, stream 1, 408 packets, payload type 0, duration 13.226
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.990053 DiagramText:pt:0 PCMU, 413 pkts, 13.376 DialogID: Level:0 MessageClass:request Operation:receive ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:rtpproxy/4367 ParticipantToID:3588470149688686176 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.990053Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|98| RTP stats from callee 192.168.64.50:7078, stream 1, 413 packets, payload type 0, duration 13.376
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.990058 DiagramText:rtpproxy[4367] RTP stats: 408 in from caller, 413 in from callee, 821 relayed, 0 dropped, stream 1 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.990058Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|85| RTP stats: 408 in from caller, 413 in from callee, 821 relayed, 0 dropped, stream 1
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.990064 DiagramText:rtpproxy[4367] RTCP stats: 0 in from caller, 5 in from callee, 5 relayed, 0 dropped, stream 1 DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.990064Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|80| RTCP stats: 0 in from caller, 5 in from callee, 5 relayed, 0 dropped, stream 1
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.990070 DiagramText:rtpproxy[4367] session on ports 45426/35516 is cleaned up, stream 1 DialogID: Level:1 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.990070Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|54| session on ports 45426/35516 is cleaned up, stream 1
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.990077 DiagramText:rtpproxy[4367] stopping comfort noise generator DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.990077Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|34| stopping comfort noise generator
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.990087 DiagramText:rtpproxy[4367] stopping comfort noise generator DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.990087Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|34| stopping comfort noise generator
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.990093 DiagramText:rtpproxy[4367] stopping transrate server DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.990093Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|27| stopping transrate server
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.990098 DiagramText:rtpproxy[4367] stopping transrate server DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.990098Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|IR|27| stopping transrate server
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.990159 DiagramText:rtpproxy[4367] sending reply: "c00kie_00000703 0" DialogID: Level:2 MessageClass:common Operation: ParticipantFrom: ParticipantFromID: ParticipantTo: ParticipantToID: SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.990159Z|rtpproxy[4367]|ab6d9db1-643c74bc@192.168.64.92|DR|36| sending reply: "c00kie_00000703 0"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.990661 DiagramText:(A.a 103/B) 200 OK DialogID:A.a Level:0 MessageClass:code_2xx Operation:receive ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.990661Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|573| RECEIVED message from UDP:192.168.67.223:5070 at UDP:192.168.67.224:5060:
+	SIP/2.0 200 OK
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---c5aa9959e1d497439eae5aaa7216c1b7;rport=5060
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-b0c37077;rport=5061
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 103 BYE
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Server: PortaSIP
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.990772 DiagramText:(B.a 796/B) BYE DialogID:B.a Level:0 MessageClass:request Operation:receive ParticipantFrom:UDP:192.168.67.223:5070 ParticipantFromID:17211154680287450525 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.990772Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|732| RECEIVED message from UDP:192.168.67.223:5070 at UDP:192.168.67.224:5060:
+	BYE sip:123002@192.168.64.50;transport=udp SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-3roqu43myvk6rgm2
+	Max-Forwards: 70
+	Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>
+	Contact: sip:192.168.67.223:5070
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 796 BYE
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	User-Agent: PortaSIP
+	cisco-GUID: 2472119662-792506170-3517290633-3517290633
+	h323-conf-id: 2472119662-792506170-3517290633-3517290633
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.991096 DiagramText:cmd-id=0703 OK DialogID: Level:0 MessageClass:request Operation:receive ParticipantFrom:rtpproxy/4367 ParticipantFromID:3588470149688686176 ParticipantTo:b2bua/4362 ParticipantToID:15212051187334408296 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.991096Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IR|109| Receiving answer from rtpproxy/4367:
+	{
+	    "answer": [
+	        "0"
+	    ],
+	    "cookie": "c00kie_00000703"
+	}
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.993121 DiagramText:(A.a 103/B) 200 OK DialogID:A.a Level:0 MessageClass:code_2xx Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.64.92:5061 ParticipantToID:4852480525443325197 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.993121Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|463| SENDING message to UDP:192.168.64.92:5061 from UDP:192.168.67.224:5060:
+	SIP/2.0 200 OK
+	Via: SIP/2.0/UDP 192.168.64.92:5061;branch=z9hG4bK-b0c37077;rport=5061
+	To: <sip:123002@192.168.67.224>;tag=+NIj7jnTk8RozSAX.i
+	From: <sip:123001@192.168.67.224>;tag=16c3112d454b3770o1
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 103 BYE
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	Server: PortaSIP
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:05.995201 DiagramText:(B.a 796/B) BYE DialogID:B.a Level:0 MessageClass:request Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.64.50:5060 ParticipantToID:16417977739822169429 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:05.995201Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|767| SENDING message to UDP:192.168.64.50:5060 from UDP:192.168.67.224:5060:
+	BYE sip:123002@192.168.64.50;transport=udp SIP/2.0
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---433fe2a2e94f64cc33402978c74e2374;rport
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-3roqu43myvk6rgm2
+	Max-Forwards: 69
+	Contact: sip:192.168.67.223:5070
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 796 BYE
+	Allow: INVITE, ACK, BYE, CANCEL, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS, UPDATE
+	User-Agent: PortaSIP
+	cisco-GUID: 2472119662-792506170-3517290633-3517290633
+	h323-conf-id: 2472119662-792506170-3517290633-3517290633
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:06.035492 DiagramText:(B.a 796/B) 200 Ok DialogID:B.a Level:0 MessageClass:code_2xx Operation:receive ParticipantFrom:UDP:192.168.64.50:5060 ParticipantFromID:16417977739822169429 ParticipantTo:UDP:192.168.67.224:5060 ParticipantToID:18414970785603340122 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:06.035492Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|530| RECEIVED message from UDP:192.168.64.50:5060 at UDP:192.168.67.224:5060:
+	SIP/2.0 200 Ok
+	Via: SIP/2.0/UDP 192.168.67.224:5060;branch=z9hG4bK-524287-1---433fe2a2e94f64cc33402978c74e2374;rport
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-3roqu43myvk6rgm2
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 796 BYE
+	Supported: replaces, outbound
+	User-Agent: Linphone/3.9.1 (belle-sip/1.4.2)
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:06.039399 DiagramText:(B.a 796/B) 200 Ok DialogID:B.a Level:1 MessageClass:code_2xx Operation:send ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:06.039399Z|edgeproxy[4783]|ab6d9db1-643c74bc@192.168.64.92|IS|427| SENDING message to UDP:192.168.67.223:5070 from UDP:192.168.67.224:5060:
+	SIP/2.0 200 Ok
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-3roqu43myvk6rgm2
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 796 BYE
+	Supported: replaces, outbound
+	User-Agent: Linphone/3.9.1 (belle-sip/1.4.2)
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:06.062688 DiagramText:(B.a 796/B) 200 Ok DialogID:B.a Level:0 MessageClass:code_2xx Operation:receive ParticipantFrom:UDP:192.168.67.224:5060 ParticipantFromID:18414970785603340122 ParticipantTo:UDP:192.168.67.223:5070 ParticipantToID:17211154680287450525 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:06.062688Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IS|428| RECEIVED message from UDP:192.168.67.224:5060 at UDP:192.168.67.223:5070:
+	SIP/2.0 200 Ok
+	Via: SIP/2.0/UDP 192.168.67.223:5070;rport=5070;branch=z9hG4bK-3roqu43myvk6rgm2
+	To: <sip:123002@192.168.67.224>;tag=tNGnCyA
+	From: <sip:777@192.168.67.224>;tag=+tN37WfToaBc+BS4.o
+	Call-ID: ab6d9db1-643c74bc@192.168.64.92
+	CSeq: 796 BYE
+	Supported: replaces, outbound
+	User-Agent: Linphone/3.9.1 (belle-sip/1.4.2)
+	Content-Length: 0
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:06.561977 DiagramText:Accounting (stop/orig) DialogID: Level:0 MessageClass:request Operation:send ParticipantFrom:b2bua/4362 ParticipantFromID:15212051187334408296 ParticipantTo:AAA ParticipantToID:11267130301079144019 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:06.561977Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IA|1932| sending Acct Stop (Originate):
+	h323-call-origin                 = "originate"
+	h323-call-type                   = "VoIP"
+	PortaOne-Transport-Protocol      = "SIP"
+	h323-setup-time                  = "14:38:50.120 GMT Wed Oct 31 2018"
+	User-Name                        = "123002"
+	Calling-Station-Id               = "123001"
+	Called-Station-Id                = "123002"
+	h323-conf-id                     = "93598D6E 2F3CAF3A D1A59889 D1A59889"
+	call-id                          = "ab6d9db1-643c74bc@192.168.64.92"
+	Acct-Session-Id                  = "ab6d9db1-643c74bc@192.168.64.92"
+	h323-remote-address              = "SIP-UA"
+	h323-incoming-conf-id            = "90DA6E94 F2288821 72D7C0EA B3815AF2"
+	h323-ivr-out                     = "PortaSIP_Aux_Info:CC=113078/2;route_seq=(4, 1);route_id=140218909909864;cc_id=140218909909360;pid=4362"
+	h323-ivr-out                     = "PortaBilling_RatePattern:INCOMING\NRX|123002"
+	h323-ivr-out                     = "PortaBilling_AccessCode:INCOMING"
+	h323-ivr-out                     = "PortaBilling_Seed:3657163663"
+	h323-remote-id                   = "SIP-UA"
+	PortaOne-Media-Info              = "direction=in;type=audio/PCMU;proxy=1;bitrate=64000;ptime=30"
+	PortaOne-Media-Info              = "direction=out;type=audio/PCMU;proxy=1;bitrate=64000;ptime=20"
+	PortaOne-Calling-Party           = "x=30;x-id=777;bill-to=123001;net=0;site=30"
+	PortaOne-Called-Party            = "x=30;x-id=000;bill-to=123002;media-time=14;net=0;site=30"
+	h323-connect-time                = "14:38:52.396 GMT Wed Oct 31 2018"
+	Acct-Status-Type                 = "Stop"
+	Event-Timestamp                  = "1540996746"
+	h323-voice-quality               = "0"
+	Acct-Terminate-Cause             = "User-Request"
+	h323-disconnect-cause            = "0"
+	alert-timepoint                  = "14:38:50.285 GMT Wed Oct 31 2018"
+	h323-disconnect-time             = "14:39:05.978 GMT Wed Oct 31 2018"
+	Acct-Session-Time                = "14"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:06.563175 DiagramText:Accounting (stop/orig) DialogID: Level:0 MessageClass:request Operation:send ParticipantFrom:b2bua/4362 ParticipantFromID:15212051187334408296 ParticipantTo:AAA ParticipantToID:11267130301079144019 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:06.563175Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IA|1682| sending Acct Stop (Originate):
+	h323-call-origin                 = "originate"
+	h323-call-type                   = "VoIP"
+	PortaOne-Transport-Protocol      = "SIP"
+	h323-setup-time                  = "14:38:50.091 GMT Wed Oct 31 2018"
+	User-Name                        = "123001"
+	Calling-Station-Id               = "123001"
+	Called-Station-Id                = "123002"
+	h323-conf-id                     = "90DA6E94 F2288821 72D7C0EA B3815AF2"
+	call-id                          = "ab6d9db1-643c74bc@192.168.64.92"
+	Acct-Session-Id                  = "ab6d9db1-643c74bc@192.168.64.92"
+	h323-remote-address              = "SIP-UA"
+	h323-ivr-out                     = "PortaSIP_Aux_Info:CC=113078/2;route_seq=(2, 0);route_id=140218909909528;cc_id=140218909909360;pid=4362"
+	h323-ivr-out                     = "PortaBilling_RatePattern:VOICEONNET\RX|123002"
+	h323-ivr-out                     = "PortaBilling_AccessCode:OUTGOING"
+	h323-ivr-out                     = "PortaBilling_Seed:3657163663"
+	h323-remote-id                   = "SIP-UA"
+	PortaOne-Calling-Party           = "x=30;x-id=777;bill-to=123001;media-time=14;net=0;ip=192.168.64.92;site=30"
+	PortaOne-Called-Party            = "x=30;x-id=000;bill-to=123002;net=0;site=30"
+	h323-connect-time                = "14:38:52.455 GMT Wed Oct 31 2018"
+	Acct-Status-Type                 = "Stop"
+	Event-Timestamp                  = "1540996746"
+	h323-voice-quality               = "0"
+	Acct-Terminate-Cause             = "User-Request"
+	h323-disconnect-cause            = "0"
+	alert-timepoint                  = "14:38:50.285 GMT Wed Oct 31 2018"
+	h323-disconnect-time             = "14:39:05.978 GMT Wed Oct 31 2018"
+	Acct-Session-Time                = "14"
+ Type:sip} {MetaInfo:{DateTime:2018-10-31 14:39:06.568562 DiagramText:Accounting (stop/answ) DialogID: Level:0 MessageClass:request Operation:send ParticipantFrom:b2bua/4362 ParticipantFromID:15212051187334408296 ParticipantTo:AAA ParticipantToID:11267130301079144019 SipNode:192.168.67.224} SipLogMessage:
+ 2018-10-31T14:39:06.568562Z|b2bua[4362]|ab6d9db1-643c74bc@192.168.64.92|IA|1598| sending Acct Stop (Answer):
+	h323-call-origin                 = "answer"
+	h323-call-type                   = "VoIP"
+	PortaOne-Transport-Protocol      = "SIP"
+	h323-setup-time                  = "14:38:50.087 GMT Wed Oct 31 2018"
+	User-Name                        = "123001"
+	Calling-Station-Id               = "123001"
+	Called-Station-Id                = "123002"
+	h323-conf-id                     = "90DA6E94 F2288821 72D7C0EA B3815AF2"
+	call-id                          = "ab6d9db1-643c74bc@192.168.64.92"
+	Acct-Session-Id                  = "ab6d9db1-643c74bc@192.168.64.92"
+	h323-remote-address              = "192.168.64.92"
+	h323-ivr-out                     = "PortaBilling_AccessCode:OUTGOING"
+	h323-ivr-out                     = "PortaBilling_Seed:3657163663"
+	h323-ivr-out                     = "PortaSIP_Aux_Info:CC=113078/1;cc_id=140218909909360;pid=4362"
+	PortaOne-Called-Party            = "x=30;x-id=000;bill-to=123002;net=0;site=30"
+	PortaOne-Media-Info              = "direction=in;type=audio/PCMU;proxy=1;bitrate=64000;ptime=20"
+	PortaOne-Media-Info              = "direction=out;type=audio/PCMU;proxy=1;bitrate=64000;ptime=30"
+	h323-connect-time                = "14:38:52.580 GMT Wed Oct 31 2018"
+	Acct-Status-Type                 = "Stop"
+	Event-Timestamp                  = "1540996746"
+	h323-voice-quality               = "0"
+	Acct-Terminate-Cause             = "User-Request"
+	h323-disconnect-cause            = "0"
+	alert-timepoint                  = "14:38:50.285 GMT Wed Oct 31 2018"
+	h323-disconnect-time             = "14:39:05.975 GMT Wed Oct 31 2018"
+	Acct-Session-Time                = "14"
+ Type:sip}]}
