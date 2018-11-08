@@ -19,23 +19,7 @@ func TestProcessSipFrom(t *testing.T) {
 		{[]byte("f: <sip:87.252.61.202>"), []byte("f: <sip:87.***.**.202>")},
 		{[]byte("From: <sip:anonymous@anonymous.invalid>"), []byte("From: <sip:ano*****s@ano******.invalid>")},
 		{[]byte("f: <sip:anonymous@anonymous.invalid>"), []byte("f: <sip:ano*****s@ano******.invalid>")},
-	}
-	for _, table := range tables {
-		line := make([]byte, len(table.src))
-		copy(line, table.src)
-		processSipFrom(line)
-		if string(line) != string(table.want) {
-			t.Errorf("Result of TestProcessSipFrom is incorrect:\n src  %s\n want %s\n got  %s",
-				table.src, table.want, line)
-		}
-	}
-}
-
-func TestProcessSipTo(t *testing.T) {
-	tables := []struct {
-		src  []byte
-		want []byte
-	}{
+		//
 		{[]byte("To: \"John Doe\" <sip:john@87.252.61.202:5070>;tag=bvbvfhehj"), []byte("To: \"Joh* **e\" <sip:j***@87.***.**.202:****>;tag=bvbvfhehj")},
 		{[]byte("t: \"John Doe\" <sip:john@87.252.61.202>;tag=bvbvfhehj"), []byte("t: \"Joh* **e\" <sip:j***@87.***.**.202>;tag=bvbvfhehj")},
 		{[]byte("To: John <sip:john@87.252.61.202>;tag=bvbvfhehj"), []byte("To: Joh* <sip:j***@87.***.**.202>;tag=bvbvfhehj")},
@@ -48,23 +32,7 @@ func TestProcessSipTo(t *testing.T) {
 		{[]byte("t: <sip:87.252.61.202>"), []byte("t: <sip:87.***.**.202>")},
 		{[]byte("To: <sip:anonymous@anonymous.invalid>"), []byte("To: <sip:ano*****s@ano******.invalid>")},
 		{[]byte("t: <sip:anonymous@anonymous.invalid>"), []byte("t: <sip:ano*****s@ano******.invalid>")},
-	}
-	for _, table := range tables {
-		line := make([]byte, len(table.src))
-		copy(line, table.src)
-		processSipTo(line)
-		if string(line) != string(table.want) {
-			t.Errorf("Result of TestProcessSipTo is incorrect:\n src  %s\n want %s\n got  %s",
-				table.src, table.want, line)
-		}
-	}
-}
-
-func TestProcessSipContact(t *testing.T) {
-	tables := []struct {
-		src  []byte
-		want []byte
-	}{
+		//
 		{[]byte("Contact: \"John Doe\" <sip:john@87.252.61.202>;tag=bvbvfhehj"), []byte("Contact: \"Joh* **e\" <sip:j***@87.***.**.202>;tag=bvbvfhehj")},
 		{[]byte("m: \"John Doe\" <sip:john@87.252.61.202>;tag=bvbvfhehj"), []byte("m: \"Joh* **e\" <sip:j***@87.***.**.202>;tag=bvbvfhehj")},
 		{[]byte("Contact: John <sip:john@87.252.61.202>;tag=bvbvfhehj"), []byte("Contact: Joh* <sip:j***@87.***.**.202>;tag=bvbvfhehj")},
@@ -79,13 +47,20 @@ func TestProcessSipContact(t *testing.T) {
 		{[]byte("Contact: sip:87.252.61.202"), []byte("Contact: sip:87.***.**.202")},
 		{[]byte("Contact: <sip:anonymous@anonymous.invalid>"), []byte("Contact: <sip:ano*****s@ano******.invalid>")},
 		{[]byte("m: <sip:anonymous@anonymous.invalid>"), []byte("m: <sip:ano*****s@ano******.invalid>")},
+		//
+		{[]byte("Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50>"), []byte("Record-Route: <sip:192.***.**.224;lr;ep;pinhole=UDP:192.***.**.50>")},
+		{[]byte("Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>"), []byte("Record-Route: <sip:192.***.**.224;lr;ep;pinhole=UDP:192.***.**.50:****>")},
+		{[]byte("Route: <sip:192.168.67.224;lr;ob;pinhole=UDP:192.168.64.50;ep>"), []byte("Route: <sip:192.***.**.224;lr;ob;pinhole=UDP:192.***.**.50;ep>")},
+		{[]byte("Route: <sip:192.168.67.224;lr;ob;pinhole=UDP:192.168.64.50:5060;ep>"), []byte("Route: <sip:192.***.**.224;lr;ob;pinhole=UDP:192.***.**.50:****;ep>")},
+		//
+
 	}
 	for _, table := range tables {
 		line := make([]byte, len(table.src))
 		copy(line, table.src)
-		processSipContact(line)
+		processURLBasedHeader(line)
 		if string(line) != string(table.want) {
-			t.Errorf("Result of TestProcessSipContact is incorrect:\n src  %s\n want %s\n got  %s",
+			t.Errorf("Result of processURLBasedHeader is incorrect:\n src  %s\n want %s\n got  %s",
 				table.src, table.want, line)
 		}
 	}
@@ -130,27 +105,6 @@ func TestProcessSipViaHeader(t *testing.T) {
 		processSipVia(line)
 		if string(line) != string(table.want) {
 			t.Errorf("Result of TestProcessSipViaHeader is incorrect:\n src  %s\n want %s\n got  %s",
-				table.src, table.want, line)
-		}
-	}
-}
-
-func TestProcessSipRouteHeader(t *testing.T) {
-	tables := []struct {
-		src  []byte
-		want []byte
-	}{
-		{[]byte("Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50>"), []byte("Record-Route: <sip:192.***.**.224;lr;ep;pinhole=UDP:192.***.**.50>")},
-		{[]byte("Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>"), []byte("Record-Route: <sip:192.***.**.224;lr;ep;pinhole=UDP:192.***.**.50:****>")},
-		{[]byte("Route: <sip:192.168.67.224;lr;ob;pinhole=UDP:192.168.64.50;ep>"), []byte("Route: <sip:192.***.**.224;lr;ob;pinhole=UDP:192.***.**.50;ep>")},
-		{[]byte("Route: <sip:192.168.67.224;lr;ob;pinhole=UDP:192.168.64.50:5060;ep>"), []byte("Route: <sip:192.***.**.224;lr;ob;pinhole=UDP:192.***.**.50:****;ep>")},
-	}
-	for _, table := range tables {
-		line := make([]byte, len(table.src))
-		copy(line, table.src)
-		processRoute(line)
-		if string(line) != string(table.want) {
-			t.Errorf("Result of TestprocessRouteHeader is incorrect:\n src  %s\n want %s\n got  %s",
 				table.src, table.want, line)
 		}
 	}

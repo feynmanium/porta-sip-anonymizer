@@ -28,6 +28,9 @@ func processSipVia(v []byte) {
 	pos = pos + 12
 	seenHost := false
 	state := FieldBase
+	rportPos := bytes.Index(v, []byte("rport="))
+	maddrPos := bytes.Index(v, []byte("maddr="))
+	recvPos := bytes.Index(v, []byte("received="))
 
 	// Loop through the bytes making up the line
 	vLen := len(v)
@@ -46,19 +49,19 @@ func processSipVia(v []byte) {
 				continue
 			}
 			// Look for a Rport identifier
-			if bytes.Equal(getBytes(v, pos, pos+6), []byte("rport=")) {
+			if pos == rportPos {
 				state = FieldPort
 				pos = pos + 6
 				continue
 			}
 			// Look for a maddr identifier
-			if bytes.Equal(getBytes(v, pos, pos+6), []byte("maddr=")) {
+			if pos == maddrPos {
 				pos = pos + 6
 				pos = pos + processHost(v[pos:])
 				continue
 			}
 			// Look for a recevived identifier
-			if bytes.Equal(getBytes(v, pos, pos+9), []byte("received=")) {
+			if pos == recvPos {
 				pos = pos + 9
 				pos = pos + processHost(v[pos:])
 				continue

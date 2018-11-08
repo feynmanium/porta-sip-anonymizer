@@ -13,6 +13,10 @@ sip.domain.com
 
 // processUser hides most part in the username like:
 // Joh* **e or 123***
+// 123*5
+// 123**6
+// 123***7
+// ...
 func processUser(v []byte) int {
 	if len(v) == 0 {
 		return 0

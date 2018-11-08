@@ -22,31 +22,27 @@ func parse(v []byte) []byte {
 				// SIP: Break up into header and value
 				lhdr := bytes.ToLower(line[0:spos])
 				switch {
-				case bytes.Equal(lhdr, []byte("v")) || bytes.Equal(lhdr, []byte("via")):
+				case bytes.Equal(lhdr, []byte("via")) || bytes.Equal(lhdr, []byte("v")):
 					ProcessSipVia(line)
-				case bytes.Equal(lhdr, []byte("f")) || bytes.Equal(lhdr, []byte("from")):
-					processSipFrom(line)
-				case bytes.Equal(lhdr, []byte("t")) || bytes.Equal(lhdr, []byte("to")):
-					processSipTo(line)
-				case bytes.Equal(lhdr, []byte("m")) || bytes.Equal(lhdr, []byte("contact")):
-					processSipContact(line)
-				case bytes.Equal(lhdr, []byte("i")) || bytes.Equal(lhdr, []byte("call-id")):
+				case bytes.Equal(lhdr, []byte("from")) || bytes.Equal(lhdr, []byte("f")) ||
+					bytes.Equal(lhdr, []byte("to")) || bytes.Equal(lhdr, []byte("t")) ||
+					bytes.Equal(lhdr, []byte("contact")) || bytes.Equal(lhdr, []byte("m")) ||
+					bytes.Equal(lhdr, []byte("route")) || bytes.Equal(lhdr, []byte("record-route")) ||
+					bytes.Equal(lhdr, []byte("remote-party-id")) || bytes.Equal(lhdr, []byte("p-asserted-identity")):
+					processURLBasedHeader(line)
+				case bytes.Equal(lhdr, []byte("call-id")) || bytes.Equal(lhdr, []byte("i")):
 					ProcessSipCallID(line)
-				case bytes.Equal(lhdr, []byte("record-route")) || bytes.Equal(lhdr, []byte("route")):
-					processRoute(line)
-				case bytes.Equal(lhdr, []byte("remote-party-id")) || bytes.Equal(lhdr, []byte("p-asserted-identity")):
-					processPrivacyHeader(line)
 				}
 			} else if spos == 1 && stype == '=' {
 				// SDP: Break up into header and value
-				lhdr := byte(line[0])
+				lhdr := line[0]
 				// Switch on the line header
 				switch {
-				case lhdr == byte('m'):
+				case lhdr == 'm':
 					processSdpMedia(line)
-				case lhdr == byte('c'):
+				case lhdr == 'c':
 					processSdpConnection(line)
-				case lhdr == byte('o'):
+				case lhdr == 'o':
 					processSdpOriginator(line)
 				} // End of Switch
 			}

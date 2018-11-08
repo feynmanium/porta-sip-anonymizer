@@ -136,8 +136,8 @@ func parseResponseSiprocket() {
 func main() {
 
 	// fmt.Println(string(rawReq))
-	msg := sipanonymizer.ProcessMessage(rawReq)
-	fmt.Printf("%s", msg)
+	// msg := sipanonymizer.ProcessMessage(rawReq)
+	// fmt.Printf("%s", msg)
 
 	// msg := sipanonymizer.ProcessMessage(rawResp)
 	// fmt.Printf("%s", msg)
@@ -147,5 +147,6 @@ func main() {
 
 	// parseResponseYakut()
 	// parseResponseSiprocket()
+	fmt.Println("YAKUT check=", byte('0') == 48)
 
 }

@@ -2,7 +2,6 @@ package sipanonymizer
 
 import (
 	"bytes"
-	"strconv"
 )
 
 /*
@@ -27,8 +26,9 @@ func processHost(v []byte) int {
 	if hostLastPos < 0 {
 		hostLastPos = len(v) - 1
 	}
+	// portLastPos :=
 
-	if _, err := strconv.ParseInt(string(v[0]), 10, 0); err != nil {
+	if v[pos] > 64 {
 		// looks like a domain
 		state = FieldPreserveFirstDomain
 
@@ -109,11 +109,7 @@ func processHost(v []byte) int {
 				return pos
 			}
 		case FieldPort:
-			// if _, err := strconv.ParseInt(string(v[pos]), 10, 0); err != nil {
-			if v[pos] == ':' ||
-				v[pos] == ' ' ||
-				v[pos] == '>' ||
-				v[pos] == ';' {
+			if v[pos] < '0' || v[pos] > '9' {
 				// port is over
 				return pos
 			}

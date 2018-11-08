@@ -20,6 +20,17 @@ func processSipURL(v []byte) {
 	state := FieldBase
 	atPos := bytes.IndexByte(v, '@')
 	pinholePos := bytes.Index(v, []byte("pinhole="))
+	schemePos := bytes.Index(v, []byte("sip:"))
+	schemeLen := 4
+
+	if schemePos < 0 {
+		schemePos = bytes.Index(v, []byte("sips:"))
+		schemeLen = 5
+		if schemePos < 0 {
+			schemePos = bytes.Index(v, []byte("tel:"))
+			schemeLen = 4
+		}
+	}
 
 	// Loop through the bytes making up the line
 	vLen := len(v)
@@ -33,38 +44,9 @@ func processSipURL(v []byte) {
 				continue
 			}
 			// Not a space so check for uri types
-			if bytes.Equal(getBytes(v, pos, pos+4), []byte("sip:")) {
-				pos = pos + 4
-				if atPos < 0 {
-					// there is no user part
-					pos = pos + processHost(v[pos+1:])
-					if pinholePos > 0 {
-						// pinhole=UDP:
-						pos = pinholePos + len("pinhole=") + 4
-						processHost(v[pos:])
-					}
-					return
-				}
-				state = FieldUser
-				continue
-			}
-			if bytes.Equal(getBytes(v, pos, pos+5), []byte("sips:")) {
-				pos = pos + 5
-				if atPos < 0 {
-					// there is no user part
-					pos = pos + processHost(v[pos+1:])
-					if pinholePos > 0 {
-						// pinhole=UDP:
-						pos = pinholePos + len("pinhole=") + 4
-						processHost(v[pos:])
-					}
-					return
-				}
-				state = FieldUser
-				continue
-			}
-			if bytes.Equal(getBytes(v, pos, pos+4), []byte("tel:")) {
-				pos = pos + 4
+			if pos == schemePos {
+				// pos = pos + 4
+				pos = pos + schemeLen
 				if atPos < 0 {
 					// there is no user part
 					pos = pos + processHost(v[pos+1:])

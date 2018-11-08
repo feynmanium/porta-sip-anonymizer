@@ -1,12 +1,14 @@
 package sipanonymizer
 
+import (
+	"bytes"
+)
+
 // Finds the first valid Seperate or notes its type
 func indexSep(s []byte) (int, byte) {
-	for i := 0; i < len(s); i++ {
-		c := s[i]
-		if c == ':' || c == '=' {
-			return i, c
-		}
+	pos := bytes.IndexAny(s, ":=")
+	if pos > 0 {
+		return pos, s[pos]
 	}
 	return -1, ' '
 }
