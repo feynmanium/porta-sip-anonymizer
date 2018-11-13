@@ -25,3 +25,25 @@ func getBytes(sl []byte, from, to int) []byte {
 	}
 	return sl[from:to]
 }
+
+func trimSpace(v []byte) []byte {
+	const space = ' '
+	n := len(v)
+	low, high := 0, n
+	for low < n && v[low] == space {
+		low++
+	}
+	for high > low && v[high-1] == space {
+		high--
+	}
+	return v[low:high:high]
+}
+
+// used for testing purposes
+type testingMaskStruct struct {
+	Mask string
+}
+
+func getTestingMaskStruct() *testingMaskStruct {
+	return &testingMaskStruct{string(maskChar)}
+}

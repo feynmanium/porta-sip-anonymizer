@@ -12,7 +12,7 @@ import (
 
 // processPortaStartLine hides user's personal data in Porta's start line
 func processPortaStartLine(v []byte) {
-	lines := bytes.Split(v, []byte(" "))
+	lines := bytes.Split(v, spaceBytes)
 	if len(lines) == 0 {
 		fmt.Println("error has occured, there are no ':' chars in line:\n", v)
 		return
