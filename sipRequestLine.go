@@ -16,7 +16,7 @@ SIP/2.0 200 OK
 // processSipRequestLine hides user's personal data in SIP request line
 func processSipRequestLine(v []byte) {
 
-	if len(v) > 7 && bytes.Equal(getBytes(v, 0, 7), []byte("SIP/2.0")) {
+	if len(v) > 7 && bytes.Equal(getBytes(v, 0, 7), sip20Bytes) {
 		// it is SIP response, there is nothing to hide
 		return
 	}
@@ -25,13 +25,13 @@ func processSipRequestLine(v []byte) {
 	// skip METHOD
 	vLen := len(v)
 
-	pos := bytes.IndexByte(v, ':')
+	pos := getIndexSep(v, ':')
 	if pos < 0 {
 		return
 	}
 	pos++
 
-	atPos := bytes.IndexByte(v, '@')
+	atPos := getIndexSep(v, atBytes)
 	if atPos < 0 {
 		// there is no user part
 		processHost(v[pos:])

@@ -20,9 +20,9 @@ func processPortaStartLine(v []byte) {
 
 	for _, line := range lines {
 		tr := getBytes(line, 0, 4)
-		if bytes.Equal(tr, []byte("UDP:")) ||
-			bytes.Equal(tr, []byte("TCP:")) ||
-			bytes.Equal(tr, []byte("TLS:")) {
+		if bytes.Equal(tr, udpBytes) ||
+			bytes.Equal(tr, tcpBytes) ||
+			bytes.Equal(tr, tlsBytes) {
 			processHost(line[5:])
 		}
 	}

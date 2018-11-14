@@ -22,17 +22,27 @@ func processHost(v []byte) int {
 	state := FieldPreserveFirstOctet
 	dotSeen := 0
 	dotCount := 0
-	hostLastPos := bytes.IndexAny(v, ":;> ")
+	hostLastPos := func() int {
+		vLen := len(v)
+		pos := 0
+		for pos < vLen {
+			if v[pos] == ':' || v[pos] == ';' || v[pos] == '>' || v[pos] == ' ' {
+				return pos
+			}
+			pos++
+		}
+		return -1
+	}()
+
 	if hostLastPos < 0 {
 		hostLastPos = len(v) - 1
 	}
-	// portLastPos :=
 
 	if v[pos] > 64 {
 		// looks like a domain
 		state = FieldPreserveFirstDomain
 
-		dotCount = bytes.Count(v[0:hostLastPos], []byte("."))
+		dotCount = bytes.Count(v[0:hostLastPos], dotBytes)
 	}
 
 	vLen := len(v)

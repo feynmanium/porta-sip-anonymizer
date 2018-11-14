@@ -18,16 +18,16 @@ sip:anonymous@anonymous.invalid;tag=bvbvfhehj
 func processSipURL(v []byte) {
 	pos := 0
 	state := FieldBase
-	atPos := bytes.IndexByte(v, '@')
-	pinholePos := bytes.Index(v, []byte("pinhole="))
-	schemePos := bytes.Index(v, []byte("sip:"))
+	atPos := getIndexSep(v, '@')
+	pinholePos := bytes.Index(v, pinholeBytes)
+	schemePos := bytes.Index(v, sipBytes)
 	schemeLen := 4
 
 	if schemePos < 0 {
-		schemePos = bytes.Index(v, []byte("sips:"))
+		schemePos = bytes.Index(v, sipsBytes)
 		schemeLen = 5
 		if schemePos < 0 {
-			schemePos = bytes.Index(v, []byte("tel:"))
+			schemePos = bytes.Index(v, telBytes)
 			schemeLen = 4
 		}
 	}
@@ -45,14 +45,14 @@ func processSipURL(v []byte) {
 			}
 			// Not a space so check for uri types
 			if pos == schemePos {
-				// pos = pos + 4
 				pos = pos + schemeLen
 				if atPos < 0 {
 					// there is no user part
 					pos = pos + processHost(v[pos+1:])
 					if pinholePos > 0 {
 						// pinhole=UDP:
-						pos = pinholePos + len("pinhole=") + 4
+						// len("pinhole=") = 8
+						pos = pinholePos + 8 + 4
 						processHost(v[pos:])
 					}
 					return

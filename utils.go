@@ -1,16 +1,38 @@
 package sipanonymizer
 
-import (
-	"bytes"
-)
-
 // Finds the first valid Seperate or notes its type
 func indexSep(s []byte) (int, byte) {
-	pos := bytes.IndexAny(s, ":=")
-	if pos > 0 {
-		return pos, s[pos]
+	const space = ' '
+	const semiColon = ':'
+	const eqChar = '='
+
+	vLen := len(s)
+	if vLen == 0 {
+		return -1, space
 	}
-	return -1, ' '
+	pos := 0
+	for pos < vLen {
+		if s[pos] == semiColon || s[pos] == eqChar {
+			return pos, s[pos]
+		}
+		pos++
+	}
+	return -1, space
+}
+
+func getIndexSep(v []byte, sep byte) int {
+	vLen := len(v)
+	pos := 0
+	for pos < vLen {
+		if v[pos] == sep {
+			break
+		}
+		pos++
+	}
+	if pos == vLen {
+		return -1
+	}
+	return pos
 }
 
 // Get a slice from a slice of bytes

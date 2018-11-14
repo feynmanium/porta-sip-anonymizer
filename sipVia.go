@@ -20,7 +20,7 @@ SIP/2.0/TCP 10.101.6.120;maddr=9.9.9.9;received=8.8.8.8;rport=8090;branch=z9hG4b
 func processSipVia(v []byte) {
 
 	// skip SIP/2.0/UDP
-	pos := bytes.Index(v, []byte("SIP"))
+	pos := bytes.Index(v, sipCapBytes)
 	if pos < 0 {
 		// not a Via
 		return
@@ -28,9 +28,9 @@ func processSipVia(v []byte) {
 	pos = pos + 12
 	seenHost := false
 	state := FieldBase
-	rportPos := bytes.Index(v, []byte("rport="))
-	maddrPos := bytes.Index(v, []byte("maddr="))
-	recvPos := bytes.Index(v, []byte("received="))
+	rportPos := bytes.Index(v, rportBytes)
+	maddrPos := bytes.Index(v, maddrBytes)
+	recvPos := bytes.Index(v, receivedBytes)
 
 	// Loop through the bytes making up the line
 	vLen := len(v)

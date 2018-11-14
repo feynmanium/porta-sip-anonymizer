@@ -26,8 +26,8 @@ func processSdpOriginator(v []byte) {
 m=audio 42352 RTP/AVP 0 8 9 18 102 103 101
 */
 func processSdpMedia(v []byte) {
-	pos := bytes.IndexByte(v, ' ') + 1
-	end := pos + bytes.IndexByte(v[pos:], ' ')
+	pos := getIndexSep(v, ' ') + 1
+	end := pos + getIndexSep(v[pos:], ' ')
 	for pos < end {
 		v[pos] = maskChar
 		pos++

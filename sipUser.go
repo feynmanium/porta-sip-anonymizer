@@ -26,7 +26,7 @@ func processUser(v []byte) int {
 	if v[pos] == '"' {
 		pos = 1
 	}
-	userLen := bytes.IndexAny(v[pos:], "<\"'@") + pos
+	userLen := bytes.IndexAny(v[pos:], userEnd) + pos
 	if userLen < 0 {
 		userLen = len(v)
 	}
