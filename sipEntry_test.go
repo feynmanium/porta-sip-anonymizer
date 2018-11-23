@@ -12,6 +12,8 @@ var (
 		"Via: SIP/2.0/UDP 10.101.6.120;branch=z9hG4bKf_7054e0adfb3_I\n\t" +
 		"Via: SIP/2.0/UDP 94.78.45.12;maddr=9.9.9.9;received=8.8.8.8;rport=8090;branch=z9hG4bKf_169eac12baa170\n\t" +
 		"Via: SIP/2.0/UDP 192.168.120.100;branch=z9hG4bKf_1234567\n\t" +
+		"Record-Route: <sip:192.168.67.224;lr;ep;pinhole=UDP:192.168.64.50:5060>\n\t" +
+		"Route: <sip:192.168.67.224;lr;ob;pinhole=UDP:192.168.64.50:5060;ep>\n\t" +
 		"From: “Andrew Prokop” <sip:aprokop@10.101.6.120:5060>;tag=35b8d8a74ca0f4e34e0adfa7_F10.101.6.120\n\t" +
 		"To: sip:twhite@10.101.5.120:5060\n\t" +
 		"Call-ID: f169eac17a017b0a4e0adfa8I@10.101.6.120\n\t" +
@@ -60,6 +62,8 @@ var (
 		"Via: SIP/2.0/UDP 10.{{.Mask}}{{.Mask}}{{.Mask}}.{{.Mask}}.120;branch=z9hG4bKf_7054e0adfb3_I\n\t" +
 		"Via: SIP/2.0/UDP 94.{{.Mask}}{{.Mask}}.{{.Mask}}{{.Mask}}.12;maddr=9.{{.Mask}}.{{.Mask}}.9;received=8.{{.Mask}}.{{.Mask}}.8;rport={{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}};branch=z9hG4bKf_169eac12baa170\n\t" +
 		"Via: SIP/2.0/UDP 192.{{.Mask}}{{.Mask}}{{.Mask}}.{{.Mask}}{{.Mask}}{{.Mask}}.100;branch=z9hG4bKf_1234567\n\t" +
+		"Record-Route: <sip:192.{{.Mask}}{{.Mask}}{{.Mask}}.{{.Mask}}{{.Mask}}.224;lr;ep;pinhole=UDP:192.{{.Mask}}{{.Mask}}{{.Mask}}.{{.Mask}}{{.Mask}}.50:{{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}}>\n\t" +
+		"Route: <sip:192.{{.Mask}}{{.Mask}}{{.Mask}}.{{.Mask}}{{.Mask}}.224;lr;ob;pinhole=UDP:192.{{.Mask}}{{.Mask}}{{.Mask}}.{{.Mask}}{{.Mask}}.50:{{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}};ep>\n\t" +
 		"From: “{{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}} {{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}} <sip:apr{{.Mask}}{{.Mask}}{{.Mask}}p@10.{{.Mask}}{{.Mask}}{{.Mask}}.{{.Mask}}.120:{{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}}>;tag=35b8d8a74ca0f4e34e0adfa7_F10.101.6.120\n\t" +
 		"To: sip:twh{{.Mask}}{{.Mask}}e@10.{{.Mask}}{{.Mask}}{{.Mask}}.{{.Mask}}.120:{{.Mask}}{{.Mask}}{{.Mask}}{{.Mask}}\n\t" +
 		"Call-ID: f169eac17a017b0a4e0adfa8I@10.{{.Mask}}{{.Mask}}{{.Mask}}.{{.Mask}}.120\n\t" +

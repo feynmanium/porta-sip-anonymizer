@@ -15,7 +15,9 @@ func getNextLine(v []byte) ([]byte, []byte) {
 	return v[:sepPos], v[sepPos+2:]
 }
 
-func parse(v []byte) []byte {
+// parse incoming array of bytes and modify it accordingly
+// NOTE: modifies incoming array
+func parse(v []byte) {
 	i := -1
 	line := []byte(nil)
 	for {
@@ -39,7 +41,8 @@ func parse(v []byte) []byte {
 					case bytes.Equal(lhdr, viaCapBytes) || bytes.Equal(lhdr, viaBytes) || bytes.Equal(lhdr, []byte("v")):
 						ProcessSipVia(line)
 					case bytes.Equal(lhdr, fromCapBytes) || bytes.Equal(lhdr, toCapBytes) || bytes.Equal(lhdr, contactCapBytes) ||
-						bytes.Equal(lhdr, routeCapBytes) || bytes.Equal(lhdr, rpidCapBytes) || bytes.Equal(lhdr, paiCapBytes) ||
+						bytes.Equal(lhdr, routeCapBytes) || bytes.Equal(lhdr, recordRouteCapBytes) || bytes.Equal(lhdr, rpidCapBytes) ||
+						bytes.Equal(lhdr, paiCapBytes) ||
 						bytes.Equal(lhdr, fromBytes) || bytes.Equal(lhdr, toBytes) || bytes.Equal(lhdr, contactBytes) ||
 						bytes.Equal(lhdr, routeBytes) || bytes.Equal(lhdr, recordRouteBytes) || bytes.Equal(lhdr, rpidBytes) ||
 						bytes.Equal(lhdr, paiBytes) ||
@@ -64,5 +67,4 @@ func parse(v []byte) []byte {
 			}
 		}
 	}
-	return v
 }
